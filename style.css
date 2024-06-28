@@ -418,13 +418,20 @@
 .roster__container {
    display: flex;
    justify-content: center;
+   margin: 2rem 2 rem;
+   padding-top: 100px;
+   padding-left: 100px;
+   padding-bottom: 50px;
+   height: fit-content;
+   max-width: 800px;
+
 }
 
 .image-container {
-    flex: 1 1 100%;
-    flex-direction: column;
-    text-align: center;
-    margin-right: 10px;
+    flex-grow: 1;
+    align-items: center;
+    height: fit-content;
+    
 }
 
 .image-container img {
@@ -435,7 +442,7 @@
 }
 
 .profile__container {
-    display: flex;
+    flex-grow: 3;
     flex-direction: column;
     flex-wrap: wrap;
     flex: 0 1 100%;
@@ -457,16 +464,18 @@
 
 .name {
     font-size: 24px;
-    margin-bottom: 10px;
+
 }
 
 
 .profile-body {
     display: flex;
+    flex-grow: 2;
     justify-self: auto;
     padding: 10px;
     max-height: 75px;
     overflow:scroll;
+
 }
 
 .details {
@@ -474,10 +483,5 @@
     flex: 1 1 100%;
     gap: 10px;
     flex-wrap: wrap;
-}
-
-.details li {
     font-size: 16px;
-    list-style-type: none;
-
 }

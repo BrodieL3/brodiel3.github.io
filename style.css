@@ -413,32 +413,33 @@
     margin: 2rem 2rem;
 }
 
-
-
 .roster__container {
+    margin-left: 4rem;
+    display: grid;
+    grid-template-columns: 650px 650px;
+}
+
+.card__container {
    display: flex;
    justify-content: center;
-   margin: 2rem 2 rem;
-   padding-top: 100px;
-   padding-left: 100px;
-   padding-bottom: 50px;
+   margin-top: 1.5rem;
+   padding-bottom: 2rem;
    height: fit-content;
-   max-width: 800px;
+   max-width: 625px;
 
 }
 
 .image-container {
     flex-grow: 1;
     align-items: center;
-    height: fit-content;
+    max-height: 125px;
     
 }
 
 .image-container img {
-    width: 100%;
-    max-width: 150px;
-    max-height: 150px;
-    position: fixed;
+    width: 125px;
+    justify-content: flex-start;
+    position: sticky;
 }
 
 .profile__container {
@@ -449,7 +450,7 @@
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    margin-left: 20vh;
+    max-height: 125px;
 }
 
 
@@ -459,11 +460,11 @@
     color: #fff;
     padding: 1rem;
     text-align: center;
-    max-height: 75px;
+    max-height: 65px;
 }
 
 .name {
-    font-size: 24px;
+    font-size: 20px;
 
 }
 
@@ -473,9 +474,7 @@
     flex-grow: 2;
     justify-self: auto;
     padding: 10px;
-    max-height: 75px;
-    overflow:scroll;
-
+    max-height: 100px;
 }
 
 .details {

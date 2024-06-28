@@ -305,7 +305,8 @@
 }
 
 .main2__container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 400px 600px;
     margin-left: 12%;
     margin-top: 3rem;
     margin-right: 12%;
@@ -411,6 +412,13 @@
 .about__main {
     background-color: white;
     margin: 2rem 2rem;
+}
+
+.roster__header {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 80%;
+    height: 250px;
 }
 
 .roster__container {

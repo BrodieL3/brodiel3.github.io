@@ -205,8 +205,8 @@
     background-image: url(images/P1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 50% 55%;
-    height: 90vh;
+    background-position: 50% 54%;
+    height: 800px;
     z-index: 1;
 }
 
@@ -217,12 +217,12 @@
 }
 
 .main__content {
-    margin: 4rem 8rem 4rem 8rem;
+    margin: 4rem 8rem 8rem 8rem;
     text-align: center;
 }
 
 .main__content h1 {
-    font-size: 4.5rem; 
+    font-size: 5.5rem; 
     color: #fff;
     background-size: 100%;
     text-shadow: 8px 8px 8px #041e42;
@@ -239,7 +239,6 @@
     font-size: 1.2rem;
     background-color: #041e42;
     margin: auto;
-    margin-top: 0px;
     color: white;
     padding: 16px 16px;
     border: none;

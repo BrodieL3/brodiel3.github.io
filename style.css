@@ -239,6 +239,7 @@
     font-size: 1.2rem;
     background-color: #041e42;
     margin: auto;
+    margin-top: 12px;
     color: white;
     padding: 16px 16px;
     border: none;
@@ -407,7 +408,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 60%;
-    height: 250px;
+    height: 220px;
     z-index: 1;
 }
 
@@ -464,11 +465,12 @@
 
 .about__content2 {
     background-color: #63666a;
-    height: 90vh;
+    height: 70vh;
     position: relative;
     margin: auto;
     overflow: hidden;
     display: flex;
+    border-radius: 20px;
 }
 
 .Slides {
@@ -502,12 +504,14 @@
 .caption {
     color: #f2f2f2;
     background: #041e42;
-    font-size: 1.3rem;
+    font-size: 1rem;
     padding: 8px 12px;
-    position: absolute;
-    bottom: -5px;
-    width: 100%;
-    text-align: center;
+    position: absolute;  
+    top: 60%; 
+    right: 70%;
+    left: 5%;
+    width: 550px;
+    text-align: left;
     line-height: 1.5;
 }
 
@@ -516,6 +520,8 @@
     font-size: 1.4rem;
     padding: 8px 12px;
     position: absolute;
+    right: 50%;
+    left: 5%;
     top: 1;
 }
 
@@ -551,7 +557,7 @@
 }
 
 .about__content3 {
-    padding: 5% 15%;
+    padding: 2% 20%;
     display: flex;
     flex-direction: column;
 }
@@ -596,7 +602,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 60%;
-    height: 28vh;
+    height: 220px;
     z-index: 1;
 }
 
@@ -694,3 +700,119 @@
 
 }
 
+.watch__container {
+    display: block;
+    background-color: #fff;
+}
+
+.shape {
+    padding: 2% 2% 0% 2%;
+}
+
+.watch__header {
+    border-radius: 20px;
+    background-image: url(images/P7.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 77%;
+    height: 45vh;
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.watch__header h1 {
+    padding-top: 2rem;
+    color:#041e42;
+    text-shadow: 1px 1px 2px #041e42;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4.5rem;
+    align-self: center;
+}
+
+.watch__header h2 {
+    padding: 1.5rem 2rem;
+    color:#fff;
+    text-shadow: 1px 1px 2px #041e42;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.2rem;
+    align-self: center;
+}
+
+.score-table {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    color:#041e42;
+}
+
+.GURFC-card {
+    width: 100px;
+    height: 100px;
+}
+
+#watch-logo {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.opponent-card {
+    width: 100px;
+    height: 100px;
+    border: 10px black solid;
+}
+
+.watch__main {
+    display: flex;
+    padding: 2% 10%;
+    color:#041e42;
+}
+
+.GURFC-videos{
+    position: fixed;
+    z-index: 20;
+    background-color: transparent;
+    min-width: 75%;
+    min-height: 75%;
+    margin-left: 10%;
+    top: 10%;
+    border: 1px white solid;
+}
+
+.watch__video {
+  width: 100%;
+}
+
+.score-box{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9rem;
+    min-width: 400px;
+}
+
+.score-box th{
+    background-color: #041e42;
+    color: white;
+    text-align: left;
+}
+
+.score-box th, td{
+    padding: 12px 15px;
+}
+
+.score-box td:nth-child(5) {
+    background-color: #d6d2c4;
+    cursor: pointer;
+}
+
+.watch__container2 {
+    display: flex;
+    flex: wrap;
+}
+
+.youtube {
+    min-width: 400px;
+    padding-top: 100px;
+}

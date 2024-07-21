@@ -239,7 +239,7 @@
     font-size: 1.2rem;
     background-color: #041e42;
     margin: auto;
-    margin-top: 12px;
+    margin-top: 32px;
     color: white;
     padding: 16px 16px;
     border: none;
@@ -634,6 +634,7 @@
     justify-content: center;
     grid-template-columns: 550px 550px;
     column-gap: 50px;
+    background-image: linear-gradient(to bottom right, white, #e5e5e5);
 }
 
 .card__container {
@@ -689,10 +690,6 @@
 }
 
 .details {
-    display: flex;
-    flex: 1 1 100%;
-    gap: 10px;
-    flex-wrap: nowrap;
     font-size: 16px;
 }
 
@@ -856,7 +853,7 @@
 
 .shop-main {
     display: block;
-    margin: 0px 20px;
+    margin: 2% 2% 0% 2%;
 }
 
 .shop-body1 {
@@ -864,7 +861,6 @@
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax(100px, auto);
     text-decoration: none;
-
 }
 
 .shop-card {

@@ -6,6 +6,19 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+
 .navbar {
     height: 90px;
     display: flex;
@@ -788,51 +801,25 @@
 
 }
 
-.watch__container {
+.watch__body {
+    background-image: linear-gradient(to bottom, white, #e5e5e5);
+}
+
+.watch__header {
     display: block;
-    background-image: linear-gradient(to bottom right, white, #e5e5e5);
+
 }
 
 .shape {
     padding: 1% 2% 0% 2%;
 }
 
-.watch__header {
-    border-radius: 20px;
-    background-image: url(images/P7.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 77%;
-    height: 45vh;
-    padding: 10px 10px;
-    display: flex;
-    flex-direction: column;
-}
-
-.watch__header h1 {
-    padding-top: 2rem;
-    color:#041e42;
-    text-shadow: 1px 1px 2px #041e42;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 4.5rem;
-    align-self: center;
-}
-
-.watch__header h2 {
-    padding: 1.5rem 2rem;
-    color:#fff;
-    text-shadow: 1px 1px 2px #041e42;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 3.2rem;
-    align-self: center;
-}
-
 .score-table {
     position: relative;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
+    justify-content: space-between;
+    align-items: baseline;
     color:#041e42;
 }
 
@@ -849,7 +836,9 @@
 .opponent-card {
     width: 100px;
     height: 100px;
-    border: 10px black solid;
+    /*Replace border with opponent picture*/
+    border-radius: 50px; 
+    border: 2px black solid;
 }
 
 .watch__main {
@@ -870,7 +859,9 @@
 }
 
 .watch__video {
-  width: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 .score-box{
@@ -901,8 +892,9 @@
 }
 
 .youtube {
-    min-width: 400px;
-    padding-top: 100px;
+    padding: 2em;
+    display: flex;
+    justify-content: space-around;
 }
 
 /*Shop CSS*/
@@ -1013,4 +1005,30 @@
         flex-direction: column;
     }
 
+}
+
+#joinimg {
+    background-image: url(images/P3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 44%;
+    height: 350px;
+    border-radius: 20px;
+}
+
+
+
+.join__btn {
+    font-size: 1.2rem;
+    background-color: #041e42;
+    margin: auto;
+    color: white;
+    padding: 16px 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.35s;
+    outline: none;
+    display: flex;
+    margin-bottom: 12px;
 }

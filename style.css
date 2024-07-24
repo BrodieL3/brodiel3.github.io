@@ -67,6 +67,7 @@ html {
 .navbar__links {
     color: #041e42;
     display: flex;
+    font-size: 1em;
     align-items: center;
     justify-content: center;
     text-decoration: none;
@@ -101,7 +102,7 @@ html {
 }
 
 .navbar__links:hover {
-    font-size: 1.1rem;
+    color:#63666a;
     transition: all 0.3s ease;
 }
 
@@ -219,7 +220,7 @@ html {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 54%;
-    height: 800px;
+    height: 700px;
     z-index: 1;
 }
 
@@ -295,11 +296,10 @@ html {
     justify-content: space-around;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1040px) {
     .main__container {
         display: flex;
         justify-content: space-between;
-        height: fit-content;
         width: 100%;
     }
 
@@ -815,10 +815,11 @@ html {
 }
 
 .score-table {
+    padding-top: 1em;
     position: relative;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: baseline;
     color:#041e42;
 }
@@ -842,31 +843,22 @@ html {
 }
 
 .watch__main {
-    display: flex;
+    display: block;
     padding: 2% 10%;
     color:#041e42;
 }
 
-.GURFC-videos{
-    position: fixed;
-    z-index: 20;
-    background-color: transparent;
-    min-width: 75%;
-    min-height: 75%;
-    margin-left: 10%;
-    top: 10%;
-    border: 1px white solid;
-}
 
 .watch__video {
-    display: flex;
-    flex-direction: column;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     width: 100%;
 }
 
 .score-box{
     border-collapse: collapse;
-    margin: 25px 0;
+    margin: 0;
     font-size: 0.9rem;
     min-width: 400px;
 }
@@ -887,8 +879,15 @@ html {
 }
 
 .watch__container2 {
+    margin-top: 1em;
     display: flex;
-    flex: wrap;
+    flex-direction: column;
+}
+
+.watch__container2 h1 {
+    padding-left: 10%;
+    font-size: 2em;
+    color: #041e42;
 }
 
 .youtube {
@@ -916,7 +915,17 @@ html {
 }
 
 .shop-header h1 {
-    padding-top: 120px;
+    padding-top: 60px;
+    color:#f2f2f2;
+    text-shadow: 2px 2px 2px #041e42;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 5rem;
+    align-self: center;
+}
+
+/*css for match.html*/
+
+.shop-header h2 {
     color:#f2f2f2;
     text-shadow: 2px 2px 2px #041e42;
     font-family: 'Montserrat', sans-serif;

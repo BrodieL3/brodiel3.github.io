@@ -448,7 +448,7 @@ html {
 
 .about__main {
     display: block;
-    background-image: linear-gradient(to bottom right, white, #e5e5e5);
+   
     margin: 0 auto;
     padding: 2% 20%;
 
@@ -796,9 +796,7 @@ html {
     }
 }
 
-@media screen and (max-width: 600px) {
 
-}
 
 .watch__body {
     background-image: linear-gradient(to bottom, white, #e5e5e5);
@@ -896,6 +894,7 @@ html {
     display: flex;
     justify-content: space-around;
 }
+
 
 /*Shop CSS*/
 

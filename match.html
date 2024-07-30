@@ -1,172 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GURFC|Watch</title>
-    <script src="https://kit.fontawesome.com/2601b20e92.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
-<body>
+    <script
+      src="https://kit.fontawesome.com/2601b20e92.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!--navigation bar-->
     <nav class="navbar">
-        <div class="navbar__container">
-            <div class="navbar__wide">
-                <a href="index.html" id="navbar__logo">
-                    <img src="images/logo.png" width="80" height="80">
-                </a>
-                <ul class="navbar__menu">
-                    <li class="navbar__item">
-                        <a href="shop.html" class="navbar__links">Shop</a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="us.html" class="navbar__links">About</a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="roster.html" class="navbar__links">Roster</a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="match.html" class="navbar__links">Watch</a>    
-                    </li>
-                    <li class="navbar__btn">
-                        <a href="watch.html" class="button">Join GURFC</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="navbar__toggle" id="mobile-menu">
-                <br>
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+      <div class="navbar__container">
+        <div class="navbar__wide">
+          <a href="index.html" id="navbar__logo">
+            <img src="images/logo.png" width="80" height="80" />
+          </a>
+          <ul class="navbar__menu">
+            <li class="navbar__item">
+              <a href="shop.html" class="navbar__links">Shop</a>
+            </li>
+            <li class="navbar__item">
+              <a href="us.html" class="navbar__links">About</a>
+            </li>
+            <li class="navbar__item">
+              <a href="roster.html" class="navbar__links">Roster</a>
+            </li>
+            <li class="navbar__item">
+              <a href="match.html" class="navbar__links">Watch</a>
+            </li>
+            <li class="navbar__btn">
+              <a href="watch.html" class="button">Join GURFC</a>
+            </li>
+          </ul>
         </div>
+        <div class="navbar__toggle" id="mobile-menu">
+          <br />
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
     </nav>
     <!-- Watch Section -->
-        <section class="watch__body">
-            <div class="watch__header"> <!--contains next match card-->
-                <div class="watch__container">
-                    <div class="shape">
-                        <div class="shop-header"> <!--borrow css from shop page-->
-                            <h1>Watch</h1>
-                            <h2>GURFC</h1>
-                        </div>
-                    </div>
-                    <h2 style="color:#041e42; text-align: center; padding-top: 24px; font-size: 2.5rem; line-height: 0;">Next Match:</h2>
-                        <div class="next-match">
-                            <div class="score-table">
-                                <div class="GURFC-card">
-                                    <img src="images/logo.png" id="watch-logo">
-                                </div>
-                                <h2>vs.</h2>
-                                <div class="opponent-card">
-                                </div>
-                            </div>
-                        </div>
-                </div>
+    <section class="watch__body">
+      <div class="watch__header">
+        <!--contains next match card-->
+        <div class="watch__container">
+          <div class="shape">
+            <div class="shop-header">
+              <!--borrow css from shop page-->
+              <h1>Watch</h1>
+              <h2>GURFC</h2>
             </div>
-            <div class="watch__container2">
-                <h1>Results</h1>
+          </div>
+          <h2
+            style="
+              color: #041e42;
+              text-align: center;
+              padding-top: 24px;
+              font-size: 2.5rem;
+              line-height: 0;
+            "
+          >
+            Next Match:
+          </h2>
+          <div class="next-match">
+            <div class="score-table">
+              <div class="GURFC-card">
+                <img src="images/logo.png" id="watch-logo" />
+              </div>
+              <h2>vs.</h2>
+              <div class="opponent-card"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="watch__container2">
+        <h1>Results</h1>
 
-                <div class="watch__main">
-                        <div class="watch__video">                        </div>
-                        <table class="score-box">
-                            <thead>
-                            <tr>
-                                <th>Opponent</th>
-                                <th>Result</th>
-                                <th>Location</th>
-                                <th>Date</th>
-                                <th>Watch</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>Villanova</td>
-                                <td>W 48-37</td>
-                                <td>Alapocas Run State Park</td>
-                                <td>11/4/2023</td>
-                                <td>Georgetown vs. Villanova</td>
-                            </tr>
-                            <tr class="active-row">
-                                <td>Scranton</td>
-                                <td>W 50-22</td>
-                                <td>North Bay Rugby Club</td>
-                                <td>10/28/2023</td>
-                                <td>Georgetown vs. Scranton</td>
-                            </tr>
-                            <tr>
-                                <td>Shippensburg</td>
-                                <td>W 28-0</td>
-                                <td>@ Shippensburg</td>
-                                <td>10/21/2023</td>
-                                <td>Shippensburg vs. Georgetown</td>
-                            </tr>
-                            <tr>
-                                <td>Drexel</td>
-                                <td>W 28-0</td>
-                                <td>Cooper Field</td>
-                                <td>10/14/2023</td>
-                                <td>Unavailable</td>
-                            </tr>
-                            <tr>
-                                <td>Towson</td>
-                                <td>W 47-0</td>
-                                <td>@ Towson</td>
-                                <td>10/7/2023</td>
-                                <td>Unavailable</td>
-                            </tr>
-                            <tr>
-                                <td>Mount C</td>
-                                <td>W 78-10</td>
-                                <td>@ Mount</td>
-                                <td>9/23/2023</td>
-                                <td>Unavailable</td>
-                            </tr>
-                            <tr>
-                                <td>UMBC</td>
-                                <td>W 78-10</td>
-                                <td>Cooper Field</td>
-                                <td>9/16/2023</td>
-                                <td>Unavailable</td>
-                            </tr>
-                            <tr>
-                                <td>York</td>
-                                <td>W 28-0</td>
-                                <td>@ York</td>
-                                <td>9/9/2023</td>
-                                <td>Unavailable</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div> 
-            <div class="videos">
-                <div class="youtube">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/mCCw3i3kI4A?si=mXqDvqglqzNDxq1U&amp;start=844" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-            </div>
-        </section>
+        <div class="watch__main">
+          <div class="watch__video">
+            <table class="score-box">
+              <thead>
+                <tr>
+                  <th>Opponent</th>
+                  <th>Result</th>
+                  <th>Location</th>
+                  <th>Date</th>
+                  <th>Watch</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Villanova</td>
+                  <td>W 48-37</td>
+                  <td>Alapocas Run State Park</td>
+                  <td>11/4/2023</td>
+                  <td>Georgetown vs. Villanova</td>
+                </tr>
+                <tr class="active-row">
+                  <td>Scranton</td>
+                  <td>W 50-22</td>
+                  <td>North Bay Rugby Club</td>
+                  <td>10/28/2023</td>
+                  <td>Georgetown vs. Scranton</td>
+                </tr>
+                <tr>
+                  <td>Shippensburg</td>
+                  <td>W 28-0</td>
+                  <td>@ Shippensburg</td>
+                  <td>10/21/2023</td>
+                  <td>Shippensburg vs. Georgetown</td>
+                </tr>
+                <tr>
+                  <td>Drexel</td>
+                  <td>W 28-0</td>
+                  <td>Cooper Field</td>
+                  <td>10/14/2023</td>
+                  <td>Unavailable</td>
+                </tr>
+                <tr>
+                  <td>Towson</td>
+                  <td>W 47-0</td>
+                  <td>@ Towson</td>
+                  <td>10/7/2023</td>
+                  <td>Unavailable</td>
+                </tr>
+                <tr>
+                  <td>Mount C</td>
+                  <td>W 78-10</td>
+                  <td>@ Mount</td>
+                  <td>9/23/2023</td>
+                  <td>Unavailable</td>
+                </tr>
+                <tr>
+                  <td>UMBC</td>
+                  <td>W 78-10</td>
+                  <td>Cooper Field</td>
+                  <td>9/16/2023</td>
+                  <td>Unavailable</td>
+                </tr>
+                <tr>
+                  <td>York</td>
+                  <td>W 28-0</td>
+                  <td>@ York</td>
+                  <td>9/9/2023</td>
+                  <td>Unavailable</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="videos">
+        <div class="youtube">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/mCCw3i3kI4A?si=mXqDvqglqzNDxq1U&amp;start=844"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
     <!--Footer Section-->
     <div class="footer__container">
-        <div class="footer__logo">
-                <a href="/" id="footer__logo">
-                        <img src="images/logo.png" width="100" height="100">
-                 </a>
-                 <p>©2024 All rights reserved</p>
-        </div>
-        <div class="social__icons">
-            <a href="/" class="social__icon--link" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a href="/" class="social__icon--link" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-            <a href="/" class="social__icon--link" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-    
-        </div>
-
+      <div class="footer__logo">
+        <a href="/" id="footer__logo">
+          <img src="images/logo.png" width="100" height="100" />
+        </a>
+        <p>©2024 All rights reserved</p>
+      </div>
+      <div class="social__icons">
+        <a href="/" class="social__icon--link" target="_blank"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a href="/" class="social__icon--link" target="_blank"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a href="/" class="social__icon--link" target="_blank"
+          ><i class="fa-brands fa-youtube"></i
+        ></a>
+      </div>
     </div>
 
     <script src="app.js"></script>
-</body>
+  </body>
 </html>

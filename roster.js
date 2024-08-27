@@ -6,56 +6,20 @@ menu.addEventListener("click", function () {
   menuLinks.classList.toggle("active");
 });
 
-let slideIndex = 1;
-showSlides(slideIndex);
+function show_list() {
+  var courses = document.getElementById("courses_id");
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides((slideIndex += n));
+  if (courses.style.display == "block") {
+    courses.style.display = "none";
+  } else {
+    courses.style.display = "block";
+  }
 }
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides((slideIndex = n));
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("Slides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {
-    slideIndex = 1;
+window.onclick = function (event) {
+  if (!event.target.matches(".dropdown_button")) {
+    document.getElementById("courses_id").style.display = "none";
   }
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-}
-
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-
-const dropdownBtn = document.querySelector("sortbtn");
-const dropdownMenu = document.querySelector("dropdown__content");
-
-const toggleDropdown = function () {
-  dropdownMenu.classList.toggle("show");
 };
-function dropdown() {
-  console.log(dropdownMenu);
-}
-
-dropdownBtn.addEventListener("click", function (e) {
-  e.stopPropagation();
-  toggleDropdown();
-});
 
 // Function to sort by last name alphabetically
 function NameSort() {

@@ -17,6 +17,32 @@
     />
   </head>
   <body>
+    <div class="next-match">
+      <div class="score-table">
+        <div class="GURFC-card">
+          <img src="images/logo.png" id="watch-logo" />
+        </div>
+        <div></div>
+        <div
+          class="card-info"
+          style="
+            display: block;
+            text-align: center;
+            line-height: 175%;
+            padding-top: 0;
+          "
+        >
+          <h4 style="color: #041e42; text-align: center; padding-top: 4px">
+            Next Match - Preseason
+          </h4>
+          <p>Sept 7 2024</p>
+        </div>
+        <div></div>
+        <div class="opponent-card">
+          <img src="images/uva-logo.png" id="opp-logo" />
+        </div>
+      </div>
+    </div>
     <!--navigation bar-->
     <nav class="navbar">
       <div class="navbar__container">
@@ -59,9 +85,58 @@
           <h1>Georgetown University Rugby Football Club</h1>
           <h2>Est. 1967</h2>
         </div>
-        <button class="main__btn"><a href="match.html">Watch Now</a></button>
+        <button class="main__btn"><a href="watch.html">Join Now</a></button>
       </div>
     </div>
+    <!--Coaching-->
+    <!-- <a href="coach.html" style="text-decoration: none">
+      <h1
+        style="
+          color: #041e42;
+          text-align: center;
+          margin: 2% 0% 0% 0%;
+          font-size: 3rem;
+          padding-bottom: 1rem;
+        "
+      >
+        Coaching
+      </h1>
+    </a>
+    <div
+      class="coaches"
+      style="
+        color: #041e42;
+        display: flex;
+        text-align: center;
+        justify-content: space-evenly;
+        font-size: 0.75rem;
+      "
+    >
+      <div class="arno" style="order: 2">
+        <img
+          src="images/ARNO.png"
+          style="width: 200px; height: 200px; border-radius: 100px"
+        />
+        <h1>Arno Van der Spek</h1>
+        <h2>Head Coach</h2>
+      </div>
+      <div class="julian" style="order: 1">
+        <img
+          src="images/JULIAN.png"
+          style="width: 200px; height: 200px; border-radius: 100px"
+        />
+        <h1>Julian Graham</h1>
+        <h2>Director of Rugby</h2>
+      </div>
+      <div class="craig" style="order: 3">
+        <img
+          src="images/CRAIG.png"
+          style="width: 200px; height: 200px; border-radius: 100px"
+        />
+        <h1>Craig Rowlings</h1>
+        <h2>Club Manager</h2>
+      </div>
+    </div> -->
     <!--Instagram-->
     <h1
       style="
@@ -85,12 +160,10 @@
           box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5),
             0 1px 10px 0 rgba(0, 0, 0, 0.15);
           margin: 1px;
-          max-width: 1000px;
+          max-width: 900px;
           min-width: 326px;
           padding: 0;
-          width: 99.375%;
-          width: -webkit-calc(100% - 2px);
-          width: calc(100% - 2px);
+          width: 90%;
         "
       >
         <div style="padding: 16px">
@@ -364,58 +437,83 @@
       <script async src="//www.instagram.com/embed.js"></script>
     </div>
     <!---About Section-->
-    <div class="main2">
-      <div class="main2__container">
-        <div class="main2__content">
-          <a href="us.html">
-            <h1>Who are we?</h1>
-          </a>
-          <br />
-          <p>
-            Founded in 1967, Georgetown University Rugby Football Club has
-            consistently competed at the highest levels of collegiate rugby. The
-            team competes in the Mid-Atlantic Rugby Conference in Division II of
-            National Collegiate Rugby. GURFC's winning culture is stronger than
-            ever thanks to our coaches and active alumni network.
-          </p>
-          <br />
-          <br />
-          <p>
-            Practice is hosted on Cooper Field from 7pm-9pm every Tuesday and
-            Thursday.
-          </p>
-          <br />
-          <br />
-          <h2>Picture: 2023 15s MARC Championship</h2>
-        </div>
-        <div class="main2__img">
-          <img src="images/P2.jpg" id="img2" />
+    <div class="main2__spacer">
+      <div class="main2">
+        <div class="main2__container">
+          <div class="main2__content">
+            <a href="us.html" style="text-decoration: none">
+              <h1>Who are we?</h1>
+            </a>
+            <br />
+            <p>
+              Founded in 1967, Georgetown University Rugby Football Club has
+              consistently competed at the highest levels of collegiate rugby.
+              The team competes in the Mid-Atlantic Rugby Conference in Division
+              II of National Collegiate Rugby. GURFC's winning culture is
+              stronger than ever thanks to our coaches and active alumni
+              network.
+            </p>
+            <br />
+            <br />
+            <p>
+              Practice is hosted on Cooper Field from 7pm-9pm every Tuesday and
+              Thursday.
+            </p>
+            <br />
+            <br />
+            <h2>Picture: 2023 15s MARC Championship</h2>
+          </div>
+          <div class="main2__img">
+            <img src="images/P2.jpg" id="img2" />
+          </div>
         </div>
       </div>
     </div>
     <!--Footer Section-->
-    <div class="footer__container">
-      <div class="footer__logo">
-        <a href="index.html" id="footer__img">
-          <img src="images/logo.png" width="100" height="100" />
-        </a>
-        <p>©2024 All rights reserved</p>
+    <section>
+      <div class="footer__container">
+        <div class="footer__logo">
+          <a href="index.html" id="footer__img">
+            <img src="images/logo.png" width="100" height="100" />
+          </a>
+          <p>©2024 All rights reserved</p>
+        </div>
+        <div class="footer__links">
+          <div class="footer__column">
+            <a href="shop.html">Shop</a>
+            <a href="us.html">About</a>
+            <a href="roster.html">Roster</a>
+            <a href="match.html">Watch</a>
+          </div>
+          <div class="footer__column">
+            <a href="watch.html">Join GURFC</a>
+            <a href="coach.html">Coaching</a>
+            <a href="https://thehoya.com/?s=rugby">Blog</a>
+            <a href="https://linktr.ee/gurfc">More Links</a>
+          </div>
+        </div>
+        <div class="social__icons">
+          <a
+            href="/"
+            class="social__icon--link"
+            target="https://www.instagram.com/gurfc/"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a
+            href="https://www.facebook.com/GURFC/"
+            class="social__icon--link"
+            target="_blank"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a
+            href="https://www.youtube.com/channel/UCkJRjD6pDyHIiu_goEFzu9A"
+            class="social__icon--link"
+            target="_blank"
+            ><i class="fa-brands fa-youtube"></i
+          ></a>
+        </div>
       </div>
-      <div class="social__icons">
-        <a
-          href="/"
-          class="social__icon--link"
-          target="https://www.instagram.com/gurfc/"
-          ><i class="fa-brands fa-instagram"></i
-        ></a>
-        <a href="/" class="social__icon--link" target="_blank"
-          ><i class="fa-brands fa-facebook"></i
-        ></a>
-        <a href="/" class="social__icon--link" target="_blank"
-          ><i class="fa-brands fa-youtube"></i
-        ></a>
-      </div>
-    </div>
+    </section>
 
     <script src="app.js"></script>
   </body>

@@ -924,7 +924,6 @@ html {
 }
 
 .details {
-  border: 1px black solid;
   border-collapse: collapse;
   margin: auto;
   margin-top: 4px;
@@ -936,7 +935,6 @@ html {
 .details th,
 .details td {
   text-align: left;
-  border: 1px black solid;
   padding: 4px 4px;
   width: 120px;
 }

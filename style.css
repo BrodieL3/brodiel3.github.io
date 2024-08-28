@@ -937,6 +937,9 @@ html {
   padding: 4px 4px;
   width: 100px;
 }
+.details td:nth-child(1) {
+  width: 130px;
+}
 
 .details td:nth-child(3) {
   width: 130px;

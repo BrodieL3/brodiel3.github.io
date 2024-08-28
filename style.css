@@ -1042,10 +1042,12 @@ html {
   .watch__container1 {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
   .watch__container2 {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -1057,45 +1059,57 @@ html {
 }
 
 .watch__Slideshow {
-  margin: 0 2%;
   max-width: 1200px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .watch__Slideshow {
     width: 90%;
+    align-items: center;
     order: 2;
+    margin-top: 12px;
   }
   .schedule-image {
-    width: 90%;
+    width: 85%;
     object-fit: contain;
     order: 1;
+  }
+
+  .score-box {
+    width: 90%;
   }
 }
 
 .schedule-image {
-  margin: 2% 0%;
-  align-self: center;
+  max-width: 684px;
+  max-height: 684px;
+  margin: 0 2%;
+  align-self: top;
   border-radius: 20px;
 }
 
 .watch__container2 {
   display: flex;
   justify-content: space-around;
-  max-width: 1200px;
   margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .score-box {
   border-collapse: collapse;
   margin: 0;
-  font-size: 0.9rem;
   min-width: 400px;
+}
+
+.score-box thead,
+.score-box tbody {
+  font-size: 0.8rem;
 }
 
 caption {
   font-size: 3rem;
-  text-align: left;
+  text-align: center;
   padding: 12px 0px;
 }
 
@@ -1107,6 +1121,7 @@ caption {
 
 .score-box th,
 .score-box td {
+  font-size: 0.9rem;
   padding: 12px 15px;
   text-align: left;
 }
@@ -1126,8 +1141,17 @@ caption {
 }
 
 .videos {
+  display: flex;
+  justify-content: space-around;
   flex: 1;
-  margin: 0 2%;
+  margin: 2% 2%;
+  width: 100%;
+  min-height: 400px;
+}
+
+.videos iframe {
+  width: 100%;
+  min-height: 300px;
 }
 
 .watch__main {
@@ -1135,13 +1159,14 @@ caption {
 }
 
 .youtube {
-  padding: 2em;
-  max-width: 600px;
+  min-width: 600px;
+  object-fit: contain;
 }
 
 @media (max-width: 600px) {
   .youtube {
-    width: 100%;
+    width: 90%;
+    min-width: 200px;
   }
 }
 

@@ -935,7 +935,11 @@ html {
 .details td {
   text-align: left;
   padding: 4px 4px;
-  width: 120px;
+  width: 100px;
+}
+
+.details td:nth-child(3) {
+  width: 130px;
 }
 
 @media screen and (max-width: 1150px) {
@@ -1031,7 +1035,17 @@ html {
 
 @media (max-width: 1200px) {
   .watch__container {
-    display: block;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .watch__container1 {
+    display: flex;
+    flex-direction: column;
+  }
+  .watch__container2 {
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -1044,14 +1058,32 @@ html {
 
 .watch__Slideshow {
   margin: 0 2%;
-  padding: 2% 0%;
   max-width: 1200px;
 }
 
+@media (max-width: 600px) {
+  .watch__Slideshow {
+    width: 90%;
+    order: 2;
+  }
+  .schedule-image {
+    width: 90%;
+    object-fit: contain;
+    order: 1;
+  }
+}
+
 .schedule-image {
-  border-radius: 20px;
   margin: 2% 0%;
   align-self: center;
+  border-radius: 20px;
+}
+
+.watch__container2 {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .score-box {
@@ -1093,13 +1125,6 @@ caption {
   background-color: #e4e2db;
 }
 
-.watch__container2 {
-  display: flex;
-  justify-content: space-around;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
 .videos {
   flex: 1;
   margin: 0 2%;
@@ -1112,6 +1137,12 @@ caption {
 .youtube {
   padding: 2em;
   max-width: 600px;
+}
+
+@media (max-width: 600px) {
+  .youtube {
+    width: 100%;
+  }
 }
 
 /*Shop CSS*/
@@ -1254,6 +1285,7 @@ caption {
   outline: none;
   display: flex;
   margin-bottom: 12px;
+  text-decoration: none;
 }
 
 .join__btn:hover {

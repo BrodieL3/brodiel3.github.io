@@ -1006,12 +1006,13 @@ html {
   align-items: center;
   color: #041e42;
   padding: 12px 16px;
+  height: 65px;
 }
 
 .GURFC-card {
   filter: drop-shadow(2px 2px 2px #999);
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
 }
 
 #watch-logo {
@@ -1020,14 +1021,14 @@ html {
 }
 
 .opponent-card {
-  max-width: 80px;
-  max-height: 80px;
+  max-width: 60px;
+  max-height: 60px;
 }
 
 #opp-logo {
-  filter: drop-shadow(5px 5px 5px #444);
-  max-width: 80px;
-  max-height: 80px;
+  filter: drop-shadow(2px 2px 2px #444);
+  max-width: 60px;
+  max-height: 60px;
   object-fit: contain;
 }
 

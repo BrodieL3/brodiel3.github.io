@@ -59,4 +59,5 @@ function updateContainer(sortedDivs) {
   var container = $("#player__list");
   container.detach().empty().append(sortedDivs);
   $("main").append(container);
+  sortedDivs.classList.add("animate__animated", "animate__fadeInUp");
 }

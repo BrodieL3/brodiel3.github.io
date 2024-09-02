@@ -227,6 +227,7 @@ html {
 .main__content {
   margin: 4rem 8rem 8rem 8rem;
   text-align: center;
+  z-index: 1;
 }
 
 .main__content h1 {
@@ -909,6 +910,10 @@ html {
   animation-delay: 200ms;
 }
 
+.animate__slideInUp:nth-child(n + 5):nth-child(-n + 24) {
+  animation-delay: 250ms;
+}
+
 .image-container {
   align-items: center;
   height: 155px;
@@ -1041,6 +1046,10 @@ html {
 
 .shape {
   padding: 1% 2% 0% 2%;
+}
+
+.next-match {
+  z-index: 2;
 }
 
 .score-table {
@@ -1230,7 +1239,7 @@ caption {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 77%;
-  height: 320px;
+  height: 300px;
   border-radius: 20px;
   margin: 10px 20px;
   display: flex;

@@ -1080,7 +1080,8 @@ html {
 }
 
 #opp-logo {
-  filter: drop-shadow(2px 2px 2px #444);
+  /*   filter: drop-shadow(2px 2px 2px #444);
+ */
   max-width: 60px;
   max-height: 60px;
   object-fit: contain;

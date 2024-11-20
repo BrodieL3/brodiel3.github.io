@@ -6,17 +6,29 @@ menu.addEventListener("click", function () {
   menuLinks.classList.toggle("active");
 });
 
-const players = [
-  {
-    lastname: "lee",
-    name: "Brodie Lee",
-    year: 2026,
-    pos: 4,
-    position: "Lock",
-    hometown: "Brookline, MA",
-  },
-  {},
-];
+//function to parse html and add player to players list
+
+function getPlayers() {
+  const playerList = document.getElementsByClassName("profile__container");
+  const players = [];
+  for (let i = 0; i < playerList.length; i++) {
+    const player = playerList[i];
+    const playerInformation = {
+      name: player.getElementsByClassName("name")[0].innerText,
+      year: player.getElementsByClassName("year")[0].innerText,
+      pos: player.getElementsByClassName("pos")[0].innerText,
+      position: player.getElementsByClassName("position")[0].innerText,
+      hometown: player.getElementsByClassName("hometown")[0].innerText,
+      image: player.getElementsByClassName("image")[0].src,
+      boardPosition: player.getElementsByClassName("boardPosition")[0].innerText
+    };
+    players.push(playerInformation);
+  }
+  return players;
+}
+
+//check to see if the players list has been populated by outputting them in players.json
+console.log(getPlayers());
 
 function createCard(player) {
   return `

@@ -6,40 +6,275 @@ menu.addEventListener("click", function () {
   menuLinks.classList.toggle("active");
 });
 
-//function to parse html and add player to players list
+const players = [
+  {
+    name: "Gavin Brady",
+    position: "Scrum-Half",
+    year: "2025",
+    hometown: "Washington, DC",
+    image: "images/roster/gav.jpg",
+    hoverImage: "images/roster/aub.jpg",
+    lastname: "Brady",
+    pos: 9,
+    board: "Captain",
+  },
+  {
+    name: "Aubrey Aird",
+    position: "Number 8",
+    year: "2025",
+    hometown: "London, UK",
+    image: "images/roster/aub.jpg",
+    lastname: "Aird",
+    pos: 8,
+    board: "President",
+  },
+  {
+    name: "Jack Lonergan",
+    position: "Hooker",
+    year: "2025",
+    hometown: "London, UK",
+    image: "images/roster/long.jpg",
+    lastname: "Lonergan",
+    pos: 2,
+    board: "Treasurer",
+  },
+  {
+    name: "Jack Duncan",
+    position: "Wing",
+    year: "2025",
+    hometown: "Pasadena, CA",
+    image: "images/roster/duncan.jpg",
+    lastname: "Duncan",
+    pos: 11,
+    board: "Social Chair",
+  },
+  {
+    name: "Matthew Mancini",
+    position: "Fullback",
+    year: "2027",
+    hometown: "Darien, CT",
+    image: "images/roster/mancini.jpg",
+    lastname: "Mancini",
+    pos: 15,
+    board: "Recruitment Chair",
+  },
+  {
+    name: "Brodie Lee",
+    position: "Lock",
+    year: "2026",
+    hometown: "Brookline, MA",
+    image: "images/roster/brodie.jpg",
+    lastname: "Lee",
+    pos: 4,
+    board: "Webmaster",
+  },
+  {
+    name: "Will Miller",
+    position: "Fullback",
+    year: "2026",
+    hometown: "Washington, DC",
+    image: "images/roster/willer.jpg",
+    lastname: "Miller",
+    pos: 15,
+    board: "Webmaster Emeritus",
+  },
+  {
+    name: "Andrew Maloney",
+    position: "Inside-Center",
+    year: "2026",
+    hometown: "Larchmont, NY",
+    image: "images/roster/drew.jpg",
+    lastname: "Maloney",
+    pos: 12,
+    board: "Alumni Chair",
+  },
+  {
+    name: "Joel Saxon",
+    position: "Scrum-half",
+    year: "2027",
+    hometown: "Morristown, NJ",
+    image: "images/roster/joel.jpeg",
+    lastname: "Saxon",
+    pos: 9,
+    board: "Vice President",
+  },
+  {
+    name: "George Egan",
+    position: "Flanker",
+    year: "2027",
+    hometown: "Omaha, NE",
+    image: "images/roster/egan.jpg",
+    lastname: "Egan",
+    pos: 6,
+  },
+  {
+    name: "Gus Dotson",
+    position: "Lock",
+    year: "2026",
+    hometown: "New York, NY",
+    image: "images/roster/dotson.jpg",
+    lastname: "Dotson",
+    pos: 5,
+  },
+  {
+    name: "Sam Ottariano",
+    position: "Prop",
+    year: "2026",
+    hometown: "Reston, VA",
+    image: "images/roster/samo.jpg",
+    lastname: "Ottariano",
+    pos: 1,
+  },
+  {
+    name: "Lucas Barsantini",
+    position: "Fullback",
+    year: "2026",
+    hometown: "Bethesda, MD",
+    image: "images/roster/lucas.jpg",
+    lastname: "Barsantini",
+    pos: 15,
+  },
+  {
+    name: "Conor Sippel",
+    position: "Fly-Half",
+    year: "2027",
+    hometown: "Hong Kong",
+    image: "images/roster/blank.jpg",
+    lastname: "Sippel",
+    pos: 10,
+  },
+  {
+    name: "Anthony Altobelli",
+    position: "Wing",
+    year: "2025",
+    hometown: "Bridgewater, NJ",
+    image: "images/roster/blank.jpg",
+    lastname: "Altobelli",
+    pos: 11,
+    board: "Match Secretary",
+  },
+  {
+    name: "Quinn Zebrowski",
+    position: "Outside Center",
+    year: "2025",
+    hometown: "Verona, NJ",
+    image: "images/roster/zebo.jpg",
+    lastname: "Zebrowski",
+    pos: 13,
+    board: "Alumni Chair Emeritus",
+  },
+  {
+    name: "Jack Daly",
+    position: "Hooker",
+    year: "2027",
+    hometown: "Wayland, MA",
+    image: "images/roster/daly.jpg",
+    lastname: "Daly",
+    pos: 2,
+  },
+  {
+    name: "Dominic Wright",
+    position: "Prop",
+    year: "2028",
+    hometown: "MI",
+    //image: "images/roster/dominic.jpg",
+    lastname: "Wright",
+    pos: 1,
+  },
+  {
+    name: "Dominic Petronsinelli",
+    position: "Prop",
+    year: "2028",
+    hometown: "MI",
+    //image: "images/roster/dominic.jpg",
+    lastname: "Petronsinelli",
+    pos: 1,
+  },
+  {
+    name: "Reid Spence",
+    position: "Lock",
+    year: "2028",
+    hometown: "Boston, MA",
+    //image: "images/roster/reid.jpg",
+    lastname: "Spence",
+    pos: 5,
+  },
+  {
+    name: "Ethan Brady",
+    position: "Lock, Flanker",
+    year: "2028",
+    hometown: "Miami, FL",
+    //image: "images/roster/ethan.jpg",
+    lastname: "Brady",
+    pos: 5,
+  },
+  {
+    name: "Levi Merenstein",
+    position: "Flanker",
+    year: "2028",
+    hometown: "unknown",
+    //image: "images/roster/levi.jpg",
+    lastname: "Merenstein",
+    pos: 6,
+  },
+  {
+    name: "Vincent Gude",
+    position: "Outside Center",
+    year: "2028",
+    hometown: "Washington, DC",
+    //image: "images/roster/gude.jpg",
+    lastname: "Gude",
+    pos: 13,
+  },
+  {
+    name: "Vincent Romano",
+    position: "Prop",
+    year: "2026",
+    hometown: "New York, NY",
+    //image: "images/roster/romano.jpg",
+    lastname: "Romano",
+    pos: 1,
+  },
+  {
+    name: "Drew McMaken",
+    position: "Flanker",
+    year: "2028",
+    hometown: "Cleveland, OH",
+    //image: "images/roster/drew.jpg",
+    lastname: "McMaken",
+    pos: 6,
+  },
+];
 
-function getPlayers() {
-  const playerList = document.getElementsByClassName("profile__container");
-  const players = [];
-  for (let i = 0; i < playerList.length; i++) {
-    const player = playerList[i];
-    const playerInformation = {
-      name: player.getElementsByClassName("name")[0].innerText,
-      year: player.getElementsByClassName("year")[0].innerText,
-      pos: player.getElementsByClassName("pos")[0].innerText,
-      position: player.getElementsByClassName("position")[0].innerText,
-      hometown: player.getElementsByClassName("hometown")[0].innerText,
-      image: player.getElementsByClassName("image")[0].src,
-      boardPosition: player.getElementsByClassName("boardPosition")[0].innerText
-    };
-    players.push(playerInformation);
-  }
-  return players;
+console.log(players.length);
+
+function printBoardPosition(player) {
+  return player.board ? `<i>${player.board}</i>` : "";
 }
 
-//check to see if the players list has been populated by outputting them in players.json
-console.log(getPlayers());
+//fucntion to change the image of the player when the user hovers on the card
+
+function createBlank(player) {
+  //if the player has an image, return the image
+  if (player.image) {
+    return player.image;
+  } else {
+    return "images/roster/blank.jpg";
+  }
+}
 
 function createCard(player) {
   return `
-  <div class="card__container animate__animated animate__slideInUp animate__faster" data-lastname="${player.lastname}" data-year="${player.year}" data-pos="${player.pos}">
+  <div class="card__container animate__animated animate__slideInUp animate__faster" data-lastname="${
+    player.lastname
+  }" data-year="${player.year}" data-pos="${player.pos}">
     <div class="image-container">
-      <img src="${player.image}" alt="Player Image" />
+      <img src="${createBlank(player)}" alt="Player Image"/>
     </div>
     <div class="profile__container">
       <div class="profile-header">
         <h1 class="name">${player.name}</h1>
-        <h2 class="board-position"><i>${player.position}</i></h2>
+        <h2 class="board-position">${printBoardPosition(player)}</h2>
       </div>
       <table class="details">
         <tr>

@@ -289,6 +289,8 @@ html {
   display: flex;
   justify-content: space-around;
   width: 100%;
+  color: #041e42;
+  font-size: 3rem;
 }
 
 .schedule__card {
@@ -1090,6 +1092,7 @@ html {
 .watch__container {
   display: flex;
   flex-direction: column;
+  height: 800px;
 }
 
 @media (max-width: 1200px) {
@@ -1218,8 +1221,9 @@ caption {
 }
 
 .youtube {
-  min-width: 600px;
-  object-fit: contain;
+  width: 100%;
+  min-width: 550px;
+  height: fit-content;
 }
 
 @media (max-width: 600px) {

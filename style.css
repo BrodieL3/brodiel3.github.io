@@ -293,6 +293,12 @@ html {
   font-size: 3rem;
 }
 
+@media screen and (max-width: 1040px) {
+  .schedule__container {
+    font-size: 1.7rem;
+  }
+}
+
 .schedule__card {
   display: inline-block;
 }

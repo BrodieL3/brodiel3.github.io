@@ -11,7 +11,7 @@ const players = [
     name: "Gavin Brady",
     position: "Scrum-Half",
     year: "2025",
-    hometown: "Washington, DC",
+    hometown: "Chevy Chase, MD",
     image: "images/roster/Gav_C.jpg",
     hoverImage: "images/roster/Gav_C.jpg",
     lastname: "Brady",
@@ -20,7 +20,7 @@ const players = [
   },
   {
     name: "Aubrey Aird",
-    position: "Number 8",
+    position: "8-Man",
     year: "2025",
     hometown: "London, UK",
     image: "images/roster/Aub_B.jpg",
@@ -67,26 +67,6 @@ const players = [
     lastname: "Lee",
     pos: 4,
     board: "Webmaster",
-  },
-  {
-    name: "Will Miller",
-    position: "Fullback",
-    year: "2026",
-    hometown: "Washington, DC",
-    image: "images/roster/willer.jpg",
-    lastname: "Miller",
-    pos: 15,
-    board: "Webmaster",
-  },
-  {
-    name: "Andrew Maloney",
-    position: "Inside-Center",
-    year: "2026",
-    hometown: "Larchmont, NY",
-    image: "images/roster/drew.jpg",
-    lastname: "Maloney",
-    pos: 12,
-    board: "Alumni Chair",
   },
   {
     name: "Anthony Altobelli",
@@ -176,7 +156,7 @@ const players = [
     name: "Nessan O'Donell",
     position: "Scrum-Half",
     year: "2025",
-    hometown: "Boston, MA",
+    hometown: "Milton, MA",
     image: "images/roster/NoD_B.jpg",
     lastname: "O'Donell",
     pos: 9,
@@ -191,10 +171,10 @@ const players = [
     pos: 1,
   },
   {
-    name: "Dominic Petronsinelli",
+    name: "Domenic Petronsinelli",
     position: "Prop",
     year: "2028",
-    hometown: "MI",
+    hometown: "Westport, CT",
     image: "images/roster/DP_A.jpg",
     lastname: "Petronsinelli",
     pos: 1,
@@ -212,7 +192,7 @@ const players = [
     name: "Reid Spence",
     position: "Lock",
     year: "2028",
-    hometown: "Boston, MA",
+    hometown: "Winchester, MA",
     //image: "images/roster/reid.jpg",
     lastname: "Spence",
     pos: 5,
@@ -248,7 +228,7 @@ const players = [
     name: "Vincent Gude",
     position: "Outside Center",
     year: "2028",
-    hometown: "Washington, DC",
+    hometown: "Vienna, VA",
     image: "images/roster/Gude_A.jpg",
     lastname: "Gude",
     pos: 13,
@@ -263,15 +243,6 @@ const players = [
     pos: 1,
   },
   {
-    name: "Vikas Bobba",
-    position: "Wing",
-    year: "2025",
-    hometown: "San Francisco, CA",
-    image: "images/roster/VK_A.jpg",
-    lastname: "Bobba",
-    pos: 11,
-  },
-  {
     name: "Drew McMaken",
     position: "Flanker",
     year: "2028",
@@ -279,6 +250,26 @@ const players = [
     image: "images/roster/Drew_B.jpg",
     lastname: "McMaken",
     pos: 6,
+  },
+  {
+    name: "Will Miller",
+    position: "Fullback",
+    year: "2026",
+    hometown: "Washington, DC",
+    image: "images/roster/willer.jpg",
+    lastname: "Miller",
+    pos: 15,
+    board: "Webmaster",
+  },
+  {
+    name: "Andrew Maloney",
+    position: "Inside-Center",
+    year: "2026",
+    hometown: "Larchmont, NY",
+    image: "images/roster/drew.jpg",
+    lastname: "Maloney",
+    pos: 12,
+    board: "Alumni Chair",
   },
 ];
 
@@ -366,7 +357,7 @@ function YrSort() {
   var numericallyOrderedDivs = $(".card__container").sort(function (a, b) {
     var yearA = $(a).data("year");
     var yearB = $(b).data("year");
-    return yearB - yearA;
+    return yearA - yearB;
   });
 
   updateContainer(numericallyOrderedDivs);

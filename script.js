@@ -103,12 +103,12 @@ const matchData = {
    --------------------------------------------------------- */
 /* IG:START — rewritten by scripts/refresh-instagram.mjs, do not edit by hand */
 const instagramPosts = [
-  { code: "DcbK5-6CBZu", image: "assets/ig-1.jpg", title: "First Week 2026", date: "August 24, 2026" },
-  { code: "DbTKeU5Dj1P", image: "assets/ig-2.jpg", title: "Scholastic All-Americans", date: "July 27, 2026" },
-  { code: "DX4yBNFFMPu", image: "assets/ig-3.jpg", title: "8th in the Nation", date: "May 3, 2026" },
-  { code: "DXZwLejlGFc", image: "assets/ig-4.jpg", title: "Sweet Sixteen", date: "April 21, 2026" },
-  { code: "DXHcuQPlNq0", image: "assets/ig-5.jpg", title: "National 7s Bound", date: "April 14, 2026" },
-  { code: "DXE-MSGFCuF", image: "assets/ig-6.jpg", title: "Alumni Newsletter", date: "April 13, 2026" },
+  { code: "DcbK5-6CBZu", image: "assets/ig-1.jpg", title: "Alright boys, the Fall 2026 15s Seaso…", date: "August 24, 2026" },
+  { code: "DbTKeU5Dj1P", image: "assets/ig-2.jpg", title: "With the summer coming to an end and…", date: "July 27, 2026" },
+  { code: "DX4yBNFFMPu", image: "assets/ig-3.jpg", title: "The boys came back from Nationals 7s…", date: "May 3, 2026" },
+  { code: "DXiGczTjjwS", image: "assets/ig-4.jpg", title: "Georgetown Rugby", date: "April 24, 2026" },
+  { code: "DXiFbuNDtbk", image: "assets/ig-5.jpg", title: "Georgetown Rugby", date: "April 24, 2026" },
+  { code: "DXhfeudDkMh", image: "assets/ig-6.jpg", title: "Georgetown Rugby", date: "April 24, 2026" },
 ];
 /* IG:END */
 

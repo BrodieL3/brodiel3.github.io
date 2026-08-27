@@ -1,0 +1,42 @@
+name: Refresh Instagram posts
+
+on:
+  schedule:
+    # 09:17 UTC daily. Off-the-hour on purpose — GitHub's scheduler is
+    # heavily contended at :00 and jobs there get delayed or dropped.
+    - cron: "17 9 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-instagram
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Pull the newest posts
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+        run: node scripts/refresh-instagram.mjs
+
+      - name: Commit if anything changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/ig-*.jpg script.js
+          if git diff --cached --quiet; then
+            echo "No new posts — nothing to commit."
+          else
+            git commit -m "Refresh Instagram posts"
+            git push
+          fi

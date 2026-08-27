@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Georgetown University Rugby Football Club, established in 1967. Join GURFC, follow match schedules, connect with alumni, and support Georgetown rugby."
+    />
+    <title>Georgetown University Rugby Football Club | GURFC</title>
+    <link rel="icon" href="assets/gurfc-logo.jpeg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" id="home">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="#home" aria-label="GURFC home">
+          <img src="assets/gurfc-logo.jpeg" alt="" />
+          <span>
+            <strong>GURFC</strong>
+            <small>Est. 1967</small>
+          </span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-links" data-nav-links>
+          <a href="#about">About</a>
+          <a href="#roster">Roster</a>
+          <a href="#schedule">Schedule</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#social">Instagram</a>
+          <a href="#alumni">Alumni</a>
+          <a href="https://www.gofundme.com/f/support-georgetown-mens-rugby-training-kit-initiative?attribution_id=sl%3Adc63d508-4a49-4159-94fe-ae818f15bdde&amp;lang=en_US&amp;ts=1784676590" target="_blank" rel="noreferrer">Donate</a>
+          <a class="nav-cta" href="https://chat.whatsapp.com/KXYX6Y7iSxTJLWx5osRQCa" target="_blank" rel="noreferrer">Join GURFC</a>
+        </div>
+      </nav>
+
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-media" data-hero-media>
+          <video
+            data-hero-video
+            src="assets/hero-loop.mp4"
+            poster="assets/hero-poster.jpg"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            aria-hidden="true"
+          ></video>
+        </div>
+        <div class="hero-scrim" aria-hidden="true"></div>
+
+        <div class="hero-content">
+          <p class="eyebrow">Division II NCR &middot; Mid-Atlantic Rugby Conference</p>
+          <h1 id="hero-title">Georgetown University Rugby Football Club</h1>
+          <p class="hero-tagline">
+            Founded in 1967. Fifteens in the fall, sevens in the spring, and a door that stays open to
+            anyone willing to work.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://chat.whatsapp.com/KXYX6Y7iSxTJLWx5osRQCa" target="_blank" rel="noreferrer">
+              Join the WhatsApp Group
+            </a>
+            <a class="button button-secondary" href="https://www.gofundme.com/f/support-georgetown-mens-rugby-training-kit-initiative?attribution_id=sl%3Adc63d508-4a49-4159-94fe-ae818f15bdde&amp;lang=en_US&amp;ts=1784676590" target="_blank" rel="noreferrer">
+              Support the Club
+            </a>
+          </div>
+
+          <div class="hero-meta">
+            <div>
+              <span><span class="live-dot"></span>Next Match</span>
+              <strong>GURFC at Catholic</strong>
+            </div>
+            <div>
+              <span>Kickoff</span>
+              <strong>Fri, Sep. 11 &middot; Away</strong>
+            </div>
+            <div>
+              <span>Training</span>
+              <strong>Tue &amp; Thu &middot; 7&ndash;9 PM</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="quickbar" aria-label="Club highlights">
+        <div>
+          <span>Practice</span>
+          <strong>Tue / Thu, 7&ndash;9 PM</strong>
+        </div>
+        <div>
+          <span>Home Pitch</span>
+          <strong>Cooper Field</strong>
+        </div>
+        <div>
+          <span>Open To</span>
+          <strong>All Experience Levels</strong>
+        </div>
+        <div>
+          <span>Formats</span>
+          <strong>15s + 7s</strong>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="shell">
+          <div class="about-grid">
+            <div data-reveal>
+              <div class="section-kicker">About GURFC</div>
+              <h2>Historic roots.<br />Competitive standard.<br />Open door.</h2>
+              <p class="lede" style="margin-top: 20px">
+                Founded in 1967, Georgetown University Rugby Football Club carries a long tradition of hard
+                rugby, campus pride, and lifelong connection. GURFC competes in Division II National
+                Collegiate Rugby in the Mid-Atlantic Rugby Conference, with a fall 15s season and a spring
+                7s slate.
+              </p>
+              <p class="lede">
+                The club develops athletes and leaders through demanding practices, A-side and B-side match
+                opportunities, and an alumni network that stays close to the program. No prior rugby
+                experience is required, and new players are welcome throughout the year.
+              </p>
+
+              <div class="stat-row">
+                <div>
+                  <strong>1967</strong>
+                  <span>Founded</span>
+                </div>
+                <div>
+                  <strong>DII</strong>
+                  <span>National Collegiate</span>
+                </div>
+                <div>
+                  <strong>15s + 7s</strong>
+                  <span>Year-Round</span>
+                </div>
+              </div>
+            </div>
+
+            <figure class="figure" data-reveal>
+              <img
+                src="assets/corner-try.jpg"
+                srcset="assets/corner-try-sm.jpg 1000w, assets/corner-try.jpg 2000w"
+                sizes="(max-width: 1060px) 100vw, 46vw"
+                alt="A GURFC player breaking a tackle to score in the corner"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>Hoya Ruggers &middot; Est. 1967</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="join" id="join">
+        <div class="shell">
+          <div class="join-grid">
+            <div data-reveal>
+              <p class="eyebrow">Recruiting</p>
+              <h2>Pull on the stripes.</h2>
+              <p style="margin-top: 18px; max-width: 48ch">
+                GURFC welcomes Georgetown students who want to compete, learn, and be part of a team with
+                real history. Whether you played rugby in high school or have never touched a ball, there is
+                a pathway onto the pitch.
+              </p>
+            </div>
+
+            <div class="join-card" data-reveal>
+              <ul class="check-list">
+                <li>No experience required</li>
+                <li>Practices Tuesday and Thursday, 7&ndash;9 PM, Cooper Field</li>
+                <li>A-side and B-side match opportunities</li>
+              </ul>
+              <a class="button button-primary" href="https://chat.whatsapp.com/KXYX6Y7iSxTJLWx5osRQCa" target="_blank" rel="noreferrer">
+                Join the WhatsApp Group
+              </a>
+              <p class="join-note">Questions? Email jbs167@georgetown.edu</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="roster">
+        <div class="shell">
+          <div class="section-heading">
+            <div data-reveal>
+              <div class="section-kicker">Roster</div>
+              <h2>Current squad</h2>
+            </div>
+            <p id="roster-count" data-reveal>Showing 31 players</p>
+          </div>
+
+          <div class="filters" aria-label="Roster filters" data-reveal>
+            <label>
+              <span>Name</span>
+              <input type="search" id="name-filter" placeholder="Search roster" />
+            </label>
+          </div>
+
+          <div class="table-wrap" data-reveal>
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Year</th>
+                  <th>Position</th>
+                  <th>Hometown / High School</th>
+                </tr>
+              </thead>
+              <tbody id="roster-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="schedule">
+        <div class="shell">
+          <div class="section-heading">
+            <div data-reveal>
+              <div class="section-kicker">Schedule &amp; Scores</div>
+              <h2>Match center</h2>
+            </div>
+          </div>
+
+          <div class="format-tabs" role="tablist" aria-label="Match format" data-reveal>
+            <button class="format-tab is-active" id="tab-15s" type="button" role="tab" aria-selected="true" data-format="fifteens">
+              15s
+            </button>
+            <button class="format-tab" id="tab-7s" type="button" role="tab" aria-selected="false" data-format="sevens">
+              7s
+            </button>
+          </div>
+
+          <div class="format-panel" id="match-format-panel" role="tabpanel" aria-live="polite" aria-labelledby="tab-15s" data-reveal></div>
+        </div>
+      </section>
+
+      <section class="section" id="gallery">
+        <div class="shell">
+          <div class="section-heading">
+            <div data-reveal>
+              <div class="section-kicker">Gallery</div>
+              <h2>On the pitch</h2>
+            </div>
+            <p data-reveal>Fifteens, sevens, and everything in between.</p>
+          </div>
+
+          <div class="gallery" data-reveal>
+            <figure>
+              <img
+                src="assets/step-defender-sm.jpg"
+                srcset="assets/step-defender-sm.jpg 1000w, assets/step-defender.jpg 2000w"
+                sizes="(max-width: 760px) 100vw, (max-width: 1060px) 50vw, 50vw"
+                alt="A GURFC player stepping inside two defenders"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+            <figure>
+              <img src="assets/break-away-sm.jpg" alt="A GURFC back running clear down the touchline" loading="lazy" decoding="async" />
+            </figure>
+            <figure>
+              <img src="assets/tackle-sm.jpg" alt="A GURFC player making a double tackle" loading="lazy" decoding="async" />
+            </figure>
+            <figure>
+              <img src="assets/scrum-feed-sm.jpg" alt="A GURFC scrumhalf feeding the ball into a scrum" loading="lazy" decoding="async" />
+            </figure>
+            <figure>
+              <img src="assets/carry-contact-sm.jpg" alt="A GURFC player carrying into contact" loading="lazy" decoding="async" />
+            </figure>
+            <figure>
+              <img src="assets/kick-open-field-sm.jpg" alt="A GURFC player striking a clearing kick" loading="lazy" decoding="async" />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="social">
+        <div class="shell">
+          <div class="section-heading">
+            <div data-reveal>
+              <div class="section-kicker">Social</div>
+              <h2>Straight from @gurfc</h2>
+            </div>
+            <a class="button button-ghost" href="https://www.instagram.com/gurfc/" target="_blank" rel="noreferrer" data-reveal>
+              Follow on Instagram
+            </a>
+          </div>
+
+          <!-- Live Instagram embeds. Each card is an <iframe> pointing at Instagram's own
+               /embed/ endpoint, so the real post renders without any third-party script.
+               The six shortcodes are set in script.js (`instagramPosts`). -->
+          <div class="ig-grid" data-ig-grid data-reveal></div>
+        </div>
+      </section>
+
+
+      <section class="section" id="alumni">
+        <div class="shell">
+          <div class="alumni-grid">
+            <div data-reveal>
+              <div class="section-kicker">Alumni</div>
+              <h2>Stay connected with the Hoya Ruggers</h2>
+              <p class="lede" style="margin-top: 18px">
+                Alumni keep GURFC moving forward through mentorship, match-day support, fundraising, and the
+                stories that connect each generation of Georgetown rugby.
+              </p>
+              <div class="hero-actions">
+                <a class="button button-navy" href="https://docs.google.com/forms/d/e/1FAIpQLSchMZmYvfDOQinUwRFHFpUtGNYYnkuOxevFRD74YQJKXN3axg/viewform" target="_blank" rel="noreferrer">
+                  Join the Alumni Newsletter
+                </a>
+                <a class="button button-ghost" href="https://www.gofundme.com/f/support-georgetown-mens-rugby-training-kit-initiative?attribution_id=sl%3Adc63d508-4a49-4159-94fe-ae818f15bdde&amp;lang=en_US&amp;ts=1784676590" target="_blank" rel="noreferrer">
+                  Donate
+                </a>
+              </div>
+            </div>
+
+            <article class="spotlight" data-reveal>
+              <span>Alumni Spotlight</span>
+              <h3>From Cooper Field to careers of impact</h3>
+              <p>
+                Feature a former player, a championship side, or reunion weekend here to keep the alumni
+                community visible on the front page.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="shop">
+        <div class="shell">
+          <div class="shop-banner" data-reveal>
+            <div>
+              <div class="section-kicker">Shop</div>
+              <h2>Wear the stripes.</h2>
+              <p style="margin-top: 12px">
+                Jersey drops, supporter gear, and alumni weekend merchandise. Email the club for current
+                availability.
+              </p>
+            </div>
+            <a class="button button-navy" href="mailto:jbs167@georgetown.edu?subject=GURFC%20kit%20enquiry">
+              Enquire About Kit
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <img src="assets/gurfc-logo.jpeg" alt="" />
+            <strong>GURFC</strong>
+          </div>
+          <p>
+            Georgetown University Rugby Football Club &middot; Est. 1967 &middot; Cooper Field,
+            Washington, DC.
+          </p>
+        </div>
+
+        <div>
+          <h4>Club</h4>
+          <nav aria-label="Footer club links">
+            <a href="#about">About</a>
+            <a href="#roster">Roster</a>
+            <a href="#schedule">Schedule &amp; Scores</a>
+            <a href="#gallery">Gallery</a>
+          </nav>
+        </div>
+
+        <div>
+          <h4>Get Involved</h4>
+          <nav aria-label="Footer action links">
+            <a href="https://chat.whatsapp.com/KXYX6Y7iSxTJLWx5osRQCa" target="_blank" rel="noreferrer">Join GURFC</a>
+            <a href="https://www.gofundme.com/f/support-georgetown-mens-rugby-training-kit-initiative?attribution_id=sl%3Adc63d508-4a49-4159-94fe-ae818f15bdde&amp;lang=en_US&amp;ts=1784676590" target="_blank" rel="noreferrer">Donate</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSchMZmYvfDOQinUwRFHFpUtGNYYnkuOxevFRD74YQJKXN3axg/viewform" target="_blank" rel="noreferrer">Alumni Newsletter</a>
+            <a href="https://www.instagram.com/gurfc/" target="_blank" rel="noreferrer">Instagram</a>
+            <a href="mailto:jbs167@georgetown.edu">jbs167@georgetown.edu</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="footer-base">&copy; 2026 Georgetown University Rugby Football Club</div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

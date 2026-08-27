@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+
+# Camera originals — kept locally, far too large for git.
+# The web-ready derivatives in assets/ are what the site actually loads.
+*.MP4
+*.mp4
+!assets/hero-loop.mp4
+DSC*.JPG
+DSC*.jpg
+
+# Retired files awaiting manual deletion
+_to_delete/

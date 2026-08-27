@@ -63,19 +63,20 @@ if (!posts.length) {
 
 /* ---------- 3. derive a short title and a readable date ---------- */
 
-const titleFrom = (caption, fallback) => {
-  if (!caption) return fallback;
+const captionFrom = (caption) => {
+  if (!caption) return "";
   const firstLine = caption
     .split("\n")
-    .map((l) => l.replace(/#[\w.]+/g, "").trim())        // drop hashtags
+    .map((l) => l.replace(/#[\w.]+/g, "").trim())          // drop hashtags
     .find((l) => l.length > 2);
-  if (!firstLine) return fallback;
+  if (!firstLine) return "";
   const clean = firstLine
-    .replace(/[\u{1F000}-\u{1FAFF}\u{2600}-\u{27BF}\u{FE0F}]/gu, "")  // drop emoji
+    .replace(/[\u{1F000}-\u{1FAFF}\u{2600}-\u{27BF}\u{FE0F}]/gu, "")   // drop emoji
     .replace(/\s+/g, " ")
     .trim();
-  if (!clean) return fallback;
-  return clean.length > 38 ? clean.slice(0, 37).trimEnd() + "…" : clean;
+  if (clean.length <= 100) return clean;
+  // cut at a word boundary rather than mid-word
+  return clean.slice(0, 99).replace(/\s+\S*$/, "") + "…";
 };
 
 const prettyDate = (iso) =>
@@ -112,12 +113,12 @@ for (const [i, post] of posts.entries()) {
   entries.push({
     code: shortcode(post.permalink) ?? post.id,
     image: file,
-    title: titleFrom(post.caption, "Georgetown Rugby"),
     date: prettyDate(post.timestamp),
+    caption: captionFrom(post.caption),
     bytes: bytes.length,
   });
 
-  console.log(`${file}  ${(bytes.length / 1024).toFixed(0)} KB  ${entries.at(-1).date}  ${entries.at(-1).title}`);
+  console.log(`${file}  ${(bytes.length / 1024).toFixed(0)} KB  ${entries.at(-1).date}  ${entries.at(-1).caption || "(no caption)"}`);
 }
 
 /* ---------- 5. rewrite the block in script.js ---------- */
@@ -138,7 +139,7 @@ const block = [
   START,
   "const instagramPosts = [",
   ...entries.map(
-    (e) => `  { code: "${esc(e.code)}", image: "${e.image}", title: "${esc(e.title)}", date: "${e.date}" },`
+    (e) => `  { code: "${esc(e.code)}", image: "${e.image}", date: "${e.date}", caption: "${esc(e.caption)}" },`
   ),
   "];",
   END,

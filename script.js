@@ -94,21 +94,21 @@ const matchData = {
 
 /* ---------------------------------------------------------
    3. INSTAGRAM  —  real @gurfc posts, embedded live.
-   Newest first. `code` is the shortcode from the post URL — the
-   DcbK5-6CBZu in instagram.com/p/DcbK5-6CBZu/ — and each card links
-   straight through to it. `image` is that post's picture, saved into
-   assets/ so the grid renders instantly and never depends on Instagram
-   being reachable. When you post something new: save its picture as
-   assets/ig-N.jpg and add a row at the top of this list.
+   Newest first, rewritten daily by the GitHub Action — see
+   README-instagram.md. `code` is the shortcode from the post URL,
+   `image` is the post's picture saved into assets/ so the grid renders
+   instantly and never depends on Instagram being reachable, and
+   `caption` is a short excerpt that may be empty (plenty of posts have
+   no caption). The card falls back to just the date when it is.
    --------------------------------------------------------- */
 /* IG:START — rewritten by scripts/refresh-instagram.mjs, do not edit by hand */
 const instagramPosts = [
-  { code: "DcbK5-6CBZu", image: "assets/ig-1.jpg", title: "Alright boys, the Fall 2026 15s Seaso…", date: "August 24, 2026" },
-  { code: "DbTKeU5Dj1P", image: "assets/ig-2.jpg", title: "With the summer coming to an end and…", date: "July 27, 2026" },
-  { code: "DX4yBNFFMPu", image: "assets/ig-3.jpg", title: "The boys came back from Nationals 7s…", date: "May 3, 2026" },
-  { code: "DXiGczTjjwS", image: "assets/ig-4.jpg", title: "Georgetown Rugby", date: "April 24, 2026" },
-  { code: "DXiFbuNDtbk", image: "assets/ig-5.jpg", title: "Georgetown Rugby", date: "April 24, 2026" },
-  { code: "DXhfeudDkMh", image: "assets/ig-6.jpg", title: "Georgetown Rugby", date: "April 24, 2026" },
+  { code: "DcbK5-6CBZu", image: "assets/ig-1.jpg", date: "August 24, 2026", caption: "Alright boys, the Fall 2026 15s season is here" },
+  { code: "DbTKeU5Dj1P", image: "assets/ig-2.jpg", date: "July 27, 2026", caption: "With the summer coming to an end" },
+  { code: "DX4yBNFFMPu", image: "assets/ig-3.jpg", date: "May 3, 2026", caption: "The boys came back from Nationals 7s" },
+  { code: "DXiGczTjjwS", image: "assets/ig-4.jpg", date: "April 24, 2026", caption: "" },
+  { code: "DXiFbuNDtbk", image: "assets/ig-5.jpg", date: "April 24, 2026", caption: "" },
+  { code: "DXhfeudDkMh", image: "assets/ig-6.jpg", date: "April 24, 2026", caption: "" },
 ];
 /* IG:END */
 
@@ -279,11 +279,11 @@ if (igGrid) {
       (post) => `
       <a class="ig-card" href="https://www.instagram.com/p/${post.code}/" target="_blank" rel="noreferrer">
         <span class="ig-media">
-          <img src="${post.image}" alt="${post.title} — Instagram post from @gurfc" loading="lazy" decoding="async" />
+          <img src="${post.image}" alt="Instagram post from @gurfc, ${post.date}" loading="lazy" decoding="async" />
         </span>
         <span class="ig-meta">
-          <span class="ig-title">${post.title}</span>
           <span class="ig-date">${post.date}</span>
+          ${post.caption ? `<span class="ig-caption">${post.caption}</span>` : ""}
         </span>
       </a>`
     )

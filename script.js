@@ -103,9 +103,9 @@ const matchData = {
    --------------------------------------------------------- */
 /* IG:START — rewritten by scripts/refresh-instagram.mjs, do not edit by hand */
 const instagramPosts = [
-  { code: "DcbK5-6CBZu", image: "assets/ig-1.jpg", date: "August 24, 2026", caption: "Alright boys, the Fall 2026 15s season is here" },
-  { code: "DbTKeU5Dj1P", image: "assets/ig-2.jpg", date: "July 27, 2026", caption: "With the summer coming to an end" },
-  { code: "DX4yBNFFMPu", image: "assets/ig-3.jpg", date: "May 3, 2026", caption: "The boys came back from Nationals 7s" },
+  { code: "DcbK5-6CBZu", image: "assets/ig-1.jpg", date: "August 24, 2026", caption: "Alright boys, the Fall 2026 15s Season starts next week. Tuesday, September 1st." },
+  { code: "DbTKeU5Dj1P", image: "assets/ig-2.jpg", date: "July 27, 2026", caption: "With the summer coming to an end and the Fall '26 season starting soon, GURFC would like to…" },
+  { code: "DX4yBNFFMPu", image: "assets/ig-3.jpg", date: "May 3, 2026", caption: "The boys came back from Nationals 7s placing 8th in the Nation in Division II." },
   { code: "DXiGczTjjwS", image: "assets/ig-4.jpg", date: "April 24, 2026", caption: "" },
   { code: "DXiFbuNDtbk", image: "assets/ig-5.jpg", date: "April 24, 2026", caption: "" },
   { code: "DXhfeudDkMh", image: "assets/ig-6.jpg", date: "April 24, 2026", caption: "" },

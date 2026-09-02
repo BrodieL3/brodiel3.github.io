@@ -54,6 +54,47 @@ const roster = [
 ];
 
 /* ---------------------------------------------------------
+   HEADSHOTS
+
+   Both grids show initials in a navy circle until real photos
+   exist. Flip a flag to true once you have dropped the images in,
+   and the circles start showing photos instead. They are off by
+   default so the page doesn't fire off dozens of requests for
+   files that aren't there yet.
+
+   Players  -> assets/roster/<first-last>.jpg   e.g. assets/roster/aidan-schmidt.jpg
+   Coaches  -> assets/coaches/<first-last>.jpg
+
+   Square images, 400x400 or larger. See assets/roster/README.txt
+   for the exact filename for every player. Any individual photo
+   that is missing just falls back to that person's initials, so a
+   partial set is fine.
+   --------------------------------------------------------- */
+
+const ROSTER_HEADSHOTS = false;
+const COACH_HEADSHOTS = false;
+
+/* ---------------------------------------------------------
+   COACHES — 10 slots, all empty placeholders for now.
+
+   Fill in name, role and bio and the card renders properly;
+   leave a slot blank and it shows as a numbered placeholder.
+   `bio` is one or two sentences on what they do with the club.
+   --------------------------------------------------------- */
+const coaches = [
+  { name: "", role: "", bio: "" },
+  { name: "", role: "", bio: "" },
+  { name: "", role: "", bio: "" },
+  { name: "", role: "", bio: "" },
+  { name: "", role: "", bio: "" },
+  { name: "", role: "", bio: "" },
+  { name: "", role: "", bio: "" },
+  { name: "", role: "", bio: "" },
+  { name: "", role: "", bio: "" },
+  { name: "", role: "", bio: "" },
+];
+
+/* ---------------------------------------------------------
    2. MATCHES  —  PLACEHOLDER DATA. Replace with real fixtures.
    `status` must be "Upcoming", "Final", or "Canceled" so the
    coloured pill picks the right style.
@@ -116,6 +157,42 @@ const instagramPosts = [
    Roster table
    ========================================================= */
 
+/* Shared helpers for the headshot circles. */
+
+const slugify = (name) =>
+  name
+    .toLowerCase()
+    .replace(/[\u2018\u2019']/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+
+const initialsOf = (name) =>
+  name
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((w) => w[0])
+    .join("")
+    .toUpperCase();
+
+const escapeHtml = (s) =>
+  String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+/* A photo that 404s is removed so the initials underneath show through.
+   That keeps a half-finished set of headshots looking deliberate. */
+function wireHeadshotFallbacks(scope) {
+  scope.querySelectorAll("img.avatar-img").forEach((img) => {
+    img.addEventListener("error", () => img.remove(), { once: true });
+  });
+}
+
+function avatarMarkup(name, dir, enabled, extraClass = "") {
+  const photo = enabled
+    ? `<img class="avatar-img" src="${dir}/${slugify(name)}.jpg" alt="" loading="lazy" decoding="async" />`
+    : "";
+  return `<span class="avatar ${extraClass}" aria-hidden="true"><span class="avatar-initials">${initialsOf(name)}</span>${photo}</span>`;
+}
+
 const rosterBody = document.querySelector("#roster-body");
 const rosterCount = document.querySelector("#roster-count");
 const filters = {
@@ -147,7 +224,12 @@ function renderRoster() {
         .map(
           (player) => `
         <tr>
-          <td data-label="Name">${player.name}</td>
+          <td data-label="Name">
+            <span class="player">
+              ${avatarMarkup(player.name, "assets/roster", ROSTER_HEADSHOTS)}
+              <span class="player-name">${escapeHtml(player.name)}</span>
+            </span>
+          </td>
           <td data-label="Year">${player.year}</td>
           <td data-label="Position">${player.position}</td>
           <td data-label="Hometown">${player.hometown}</td>
@@ -156,6 +238,7 @@ function renderRoster() {
         .join("")
     : `<tr class="empty-row"><td colspan="4">No players match those filters.</td></tr>`;
 
+  wireHeadshotFallbacks(rosterBody);
   rosterCount.textContent = `Showing ${visible.length} player${visible.length === 1 ? "" : "s"}`;
 }
 
@@ -163,6 +246,36 @@ Object.values(filters)
   .filter(Boolean)
   .forEach((field) => field.addEventListener("input", renderRoster));
 renderRoster();
+
+/* =========================================================
+   Coaching staff
+   ========================================================= */
+
+const coachGrid = document.querySelector("[data-coach-grid]");
+
+if (coachGrid) {
+  coachGrid.innerHTML = coaches
+    .map((coach, i) => {
+      if (!coach.name) {
+        return `
+        <article class="coach-card is-empty">
+          <span class="avatar avatar-lg" aria-hidden="true"><span class="avatar-initials">${i + 1}</span></span>
+          <h3 class="coach-name">Coach ${i + 1}</h3>
+          <p class="coach-role">To be added</p>
+        </article>`;
+      }
+      return `
+        <article class="coach-card">
+          ${avatarMarkup(coach.name, "assets/coaches", COACH_HEADSHOTS, "avatar-lg")}
+          <h3 class="coach-name">${escapeHtml(coach.name)}</h3>
+          ${coach.role ? `<p class="coach-role">${escapeHtml(coach.role)}</p>` : ""}
+          ${coach.bio ? `<p class="coach-bio">${escapeHtml(coach.bio)}</p>` : ""}
+        </article>`;
+    })
+    .join("");
+
+  wireHeadshotFallbacks(coachGrid);
+}
 
 /* =========================================================
    Match centre

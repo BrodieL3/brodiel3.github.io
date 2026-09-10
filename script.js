@@ -93,7 +93,7 @@ const roster = [
    partial set is fine.
    --------------------------------------------------------- */
 
-const ROSTER_HEADSHOTS = false;
+const ROSTER_HEADSHOTS = true;
 const COACH_HEADSHOTS = false;
 
 /* ---------------------------------------------------------

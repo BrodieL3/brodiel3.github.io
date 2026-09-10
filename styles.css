@@ -586,6 +586,7 @@ p:last-child { margin-bottom: 0; }
 }
 
 .join-card .button { width: 100%; }
+.join-card .button + .button { margin-top: 12px; }
 
 .join-note {
   margin-top: 14px;

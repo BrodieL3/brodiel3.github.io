@@ -113,7 +113,7 @@ const coaches = [
   { name: "Jeffrey Ferrigno", role: "Coach", bio: "" },
   { name: "Josh Brady", role: "Coach", bio: "" },
   { name: "Craig Rowlings", role: "Coach", bio: "" },
-  { name: "", role: "", bio: "" },
+  { name: "Brian Ferrigno", role: "Coach", bio: "" },
 ];
 
 /* ---------------------------------------------------------

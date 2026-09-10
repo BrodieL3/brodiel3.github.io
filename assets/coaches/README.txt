@@ -1,12 +1,25 @@
-Same rules as the player headshots, named after each coach:
+HEADSHOTS — COACHING STAFF
 
-    firstname-lastname.jpg      e.g. john-smith.jpg
+COACH_HEADSHOTS is ON (script.js ~line 97). 8 of 9 coaches have a photo,
+auto square-cropped and resized to 800x800, same pipeline as the player
+headshots (2026-09-10):
 
-Fill the `coaches` array in script.js with each coach's name, role and
-a one-line bio, then set
+  Howard Chang         ->  howard-chang.jpg       (from 09.2026 folder)
+  Morgan Landy         ->  morgan-landy.jpg       (from 09.2026 folder)
+  Julian Graham        ->  julian-graham.jpg
+  Mark C. Ingram       ->  mark-c-ingram.jpg
+  Dacoda Worth         ->  dacoda-worth.jpg
+  Arno Van Der Spek    ->  arno-van-der-spek.jpg  (source file was misspelled
+                                                    "Anro" — assumed same
+                                                    person, worth confirming)
+  Jeffrey Ferrigno     ->  jeffrey-ferrigno.jpg   [NEEDS PHOTO — none supplied]
+  Josh Brady           ->  josh-brady.jpg
+  Craig Rowlings       ->  craig-rowlings.jpg
 
-    const COACH_HEADSHOTS = true;
+Filename = slugify(name): lowercase, apostrophes stripped, everything else
+non-alphanumeric becomes a hyphen. 400x400px+ JPG, one per person.
 
-The filename must match the name in that array — lowercase, spaces and
-apostrophes turned into hyphens. Ten slots are laid out; unfilled ones
-show as dashed placeholder cards.
+To add or change a coach: edit the `coaches` array in script.js (name,
+role, one-line bio — bio is optional and left blank for everyone right
+now since none were supplied) and drop a matching photo here. One slot
+(10th) is still empty for a future addition.

@@ -94,7 +94,7 @@ const roster = [
    --------------------------------------------------------- */
 
 const ROSTER_HEADSHOTS = true;
-const COACH_HEADSHOTS = false;
+const COACH_HEADSHOTS = true;
 
 /* ---------------------------------------------------------
    COACHES — 10 slots, all empty placeholders for now.
@@ -104,15 +104,15 @@ const COACH_HEADSHOTS = false;
    `bio` is one or two sentences on what they do with the club.
    --------------------------------------------------------- */
 const coaches = [
-  { name: "", role: "", bio: "" },
-  { name: "", role: "", bio: "" },
-  { name: "", role: "", bio: "" },
-  { name: "", role: "", bio: "" },
-  { name: "", role: "", bio: "" },
-  { name: "", role: "", bio: "" },
-  { name: "", role: "", bio: "" },
-  { name: "", role: "", bio: "" },
-  { name: "", role: "", bio: "" },
+  { name: "Howard Chang", role: "Coach", bio: "" },
+  { name: "Morgan Landy", role: "Coach", bio: "" },
+  { name: "Julian Graham", role: "Director of Rugby", bio: "" },
+  { name: "Mark C. Ingram", role: "Coach", bio: "" },
+  { name: "Dacoda Worth", role: "Head Coach", bio: "" },
+  { name: "Arno Van Der Spek", role: "Head Coach", bio: "" },
+  { name: "Jeffrey Ferrigno", role: "Coach", bio: "" },
+  { name: "Josh Brady", role: "Coach", bio: "" },
+  { name: "Craig Rowlings", role: "Coach", bio: "" },
   { name: "", role: "", bio: "" },
 ];
 

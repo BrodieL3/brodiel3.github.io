@@ -14,3 +14,4 @@ _to_delete/
 # Raw headshot photo dumps — originals kept locally, never in git.
 # The cropped/renamed versions actually used live in assets/roster/.
 /09.2026*/
+/Coaches/

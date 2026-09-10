@@ -114,6 +114,7 @@ const coaches = [
   { name: "Mark C. Ingram", role: "Coach", bio: "" },
   { name: "Morgan Landy", role: "Coach", bio: "" },
   { name: "Craig Rowlings", role: "Coach", bio: "" },
+  { name: "Kellie Yamane", role: "Physiotherapist", bio: "" },
 ];
 
 /* ---------------------------------------------------------
@@ -131,11 +132,11 @@ const matchData = {
     next: {
       status: "Season Opener",
       matchup: "GURFC at Catholic University",
-      detail: "Friday, September 11, 2026",
+      detail: "Friday, September 11, 2026 \u00b7 7:00 PM at Cardinal Stadium",
       side: "Away",
     },
     matches: [
-      { date: "Fri, Sep. 11, 2026", opponent: "Catholic University", side: "Away", venue: "TBD" },
+      { date: "Fri, Sep. 11, 2026", opponent: "Catholic University", side: "Away", venue: "Cardinal Stadium, 7:00 PM" },
       { date: "Sat, Sep. 19, 2026", opponent: "Frostburg University", side: "Away", venue: "TBD" },
       { date: "Sat, Sep. 26, 2026", opponent: "UMBC", side: "Home", venue: "Cooper Field" },
       { date: "Fri, Oct. 2, 2026", opponent: "Loyola", side: "Home", venue: "Cooper Field" },

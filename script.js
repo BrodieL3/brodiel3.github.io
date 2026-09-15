@@ -26,6 +26,7 @@ const roster = [
   { name: "Conor Sippel", year: "Senior", position: "Flyhalf", hometown: "Hong Kong / Valley Fort RFC", title: "Social Chair" },
   { name: "Vince Gude", year: "Junior", position: "Scrum-half / Wing / Center", hometown: "Vienna, VA / Gonzaga College High School", title: "Match Secretary" },
   { name: "Will Puzzuoli", year: "Junior", position: "Center / Winger", hometown: "Rye, NY / Rye High School", title: "Alumni Chair" },
+  { name: "Dominic Wright", year: "Junior", position: "Tighthead Prop", hometown: "Columbiaville, MI / Lakeville Memorial High School", title: "Webmaster" },
   { name: "Finn Sippel", year: "Sophomore", position: "Center", hometown: "Hong Kong / German Swiss International School", title: "Vice President" },
   { name: "Patrick Mancini", year: "Sophomore", position: "Scrum-half / Winger", hometown: "Darien, CT / Fairfield College Preparatory School", title: "Recruitment Chair" },
   { name: "Elias Abourjaili", year: "Freshman", position: "Center / Fullback", hometown: "Danvers, MA / Malden Catholic High School" },
@@ -46,7 +47,7 @@ const roster = [
   { name: "James Foundos", year: "Sophomore", position: "Prop / Backrow", hometown: "San Diego, CA / Francis Parker High School" },
   { name: "Eduard Giurca", year: "Sophomore", position: "Backrow", hometown: "Dublin, Ireland / Clongowes Wood College SJ" },
   { name: "Will Hartford", year: "Junior", position: "Winger", hometown: "Milton, MA / Boston College High School" },
-  { name: "Walker Humphries", year: "Sophomore", position: "Winger", hometown: "Wellington, UK / Wellington College" },
+  { name: "Walker Humphries", year: "Sophomore", position: "Winger", hometown: "London, UK / Wellington College" },
   { name: "Jay Kapoor", year: "Freshman", position: "Flanker / Prop", hometown: "Bethesda, MD / Landon School" },
   { name: "Oliver Kim", year: "Freshman", position: "Scrum-half", hometown: "Lawrenceville, NJ / The Peddie School" },
   { name: "Vedant Kulkarni", year: "Freshman", position: "—", hometown: "Boston, MA / Nobles and Greenough School" },
@@ -72,6 +73,7 @@ const roster = [
   { name: "Jackson Snyder", year: "Freshman", position: "Lock", hometown: "Washington, DC / Georgetown Prep" },
   { name: "Harry Spence", year: "Sophomore", position: "Lock", hometown: "New York, NY / Groton School" },
   { name: "Salar Syed", year: "Freshman", position: "—", hometown: "Lahore, Pakistan" },
+  { name: "Charlie Tomasso", year: "Freshman", position: "Winger / Fullback", hometown: "Bethesda, MD / Georgetown Prep" },
   { name: "Noah Wheaton", year: "Freshman", position: "Scrum-half", hometown: "Cheltenham, United Kingdom / Dean Close School" },
 ];
 
@@ -517,4 +519,36 @@ if (prefersReducedMotion || !("IntersectionObserver" in window)) {
   );
 
   revealTargets.forEach((el) => observer.observe(el));
+
+  // Safety net: some mobile browsers (notably iOS Safari during momentum
+  // scrolling) can miss firing the IntersectionObserver callback for a
+  // target that's already sitting in the viewport, leaving it stuck at
+  // opacity 0 until some unrelated event (like the keyboard opening,
+  // which resizes the viewport) forces a recheck. Manually re-verify any
+  // not-yet-revealed target against the viewport a few times after load
+  // and on resize/orientation change, so nothing is ever permanently
+  // invisible.
+  const revealIfInView = () => {
+    let allDone = true;
+    revealTargets.forEach((el) => {
+      if (el.classList.contains("is-visible")) return;
+      const rect = el.getBoundingClientRect();
+      const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+      if (rect.top < viewportHeight * 0.92 && rect.bottom > 0) {
+        el.classList.add("is-visible");
+        observer.unobserve(el);
+      } else {
+        allDone = false;
+      }
+    });
+    return allDone;
+  };
+
+  [300, 900, 1800].forEach((delay) => setTimeout(revealIfInView, delay));
+  window.addEventListener("load", revealIfInView);
+  window.addEventListener("resize", revealIfInView, { passive: true });
+  window.addEventListener("orientationchange", revealIfInView);
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible") revealIfInView();
+  });
 }

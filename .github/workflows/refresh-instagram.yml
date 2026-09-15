@@ -17,6 +17,12 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    # This workflow file is mirrored into BrodieL3/brodiel3.github.io (the
+    # gurfc.com host) via force-push along with the rest of the site. The
+    # IG_ACCESS_TOKEN secret only exists on THIS repo, so skip the job
+    # entirely when running anywhere else — otherwise it fails on schedule
+    # every day over there with nothing to fix it.
+    if: github.repository == 'eduardgci/gurfc-website'
     steps:
       - uses: actions/checkout@v5
 

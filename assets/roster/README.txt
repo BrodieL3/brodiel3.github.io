@@ -1,9 +1,11 @@
 HEADSHOTS — PLAYERS
 
 ROSTER_HEADSHOTS is ON (script.js ~line 96) — the site is requesting these
-files now. 38 of 53 players have a photo, sourced from the 09.2026 / 09.2026 2 /
-09.2026 3 folders (2026-09-10), auto square-cropped and resized to 800x800.
-The 15 below marked [NEEDS PHOTO] still show initials — drop in a photo named
+files now. 44 of 55 players have a photo, sourced from the 09.2026 / 09.2026 2 /
+09.2026 3 folders (2026-09-10) and the 2025.26 folder (2026-09-15, used only as
+a fallback for players who had no current headshot — never to replace an
+existing one), auto square-cropped and resized to 800x800.
+The 11 below marked [NEEDS PHOTO] still show initials — drop in a photo named
 exactly as listed and it picks up automatically, no flag or code change needed.
 
 400x400px+ JPG, one per person.
@@ -13,11 +15,11 @@ Will Puzzuoli           ->  will-puzzuoli.jpg  [NEEDS PHOTO]
 Evan O'Reilly           ->  evan-oreilly.jpg
 Alexander Ma            ->  alexander-ma.jpg
 Joel Saxon              ->  joel-saxon.jpg
-Levi Merenstein         ->  levi-merenstein.jpg  [NEEDS PHOTO]
+Levi Merenstein         ->  levi-merenstein.jpg
 Gabriel Fenton          ->  gabriel-fenton.jpg
 Nicholas Bruno          ->  nicholas-bruno.jpg
-Matthew Mancini         ->  matthew-mancini.jpg  [NEEDS PHOTO]
-Martin Morgan           ->  martin-morgan.jpg  [NEEDS PHOTO]
+Matthew Mancini         ->  matthew-mancini.jpg
+Martin Morgan           ->  martin-morgan.jpg
 Conor Sippel            ->  conor-sippel.jpg
 Finn Sippel             ->  finn-sippel.jpg
 Walker Humphries        ->  walker-humphries.jpg
@@ -26,7 +28,7 @@ Kamron Norasteh         ->  kamron-norasteh.jpg
 Robin Sechriest         ->  robin-sechriest.jpg
 Nick Luongo             ->  nick-luongo.jpg
 Ansel Scholl            ->  ansel-scholl.jpg
-Pratham Sethia          ->  pratham-sethia.jpg  [NEEDS PHOTO]
+Pratham Sethia          ->  pratham-sethia.jpg
 James Foundos           ->  james-foundos.jpg
 Will Hartford           ->  will-hartford.jpg  [NEEDS PHOTO]
 Dante Agostini          ->  dante-agostini.jpg
@@ -61,3 +63,5 @@ Ishaan Mittal           ->  ishaan-mittal.jpg
 Bernardo Amare          ->  bernardo-amare.jpg  [NEEDS PHOTO]
 Arthur Murray           ->  arthur-murray.jpg
 Nicholas Plachta        ->  nicholas-plachta.jpg  [NEEDS PHOTO]
+Dominic Wright          ->  dominic-wright.jpg
+Charlie Tomasso         ->  charlie-tomasso.jpg

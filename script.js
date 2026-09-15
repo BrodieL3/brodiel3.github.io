@@ -114,7 +114,7 @@ const coaches = [
   { name: "Mark C. Ingram", role: "Coach", bio: "" },
   { name: "Morgan Landy", role: "Coach", bio: "" },
   { name: "Craig Rowlings", role: "Coach", bio: "" },
-  { name: "Kellie Yamane", role: "Team Nurse", bio: "" },
+  { name: "Kellie Yamane", role: "Team Trainer", bio: "" },
 ];
 
 /* ---------------------------------------------------------

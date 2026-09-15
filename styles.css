@@ -876,6 +876,9 @@ tbody tr:hover { background: var(--surface-2); }
 .pill.upcoming { background: #eef2f8; color: var(--navy); }
 .pill.final { background: #eaf3ec; color: #1f6b39; }
 .pill.canceled { background: #f7eaea; color: #96323b; }
+.pill.win { background: #eaf3ec; color: #1f6b39; }
+.pill.loss { background: #f7eaea; color: #96323b; }
+.pill.draw { background: #f4f1e8; color: #7a6a2e; }
 
 .pill.side { border: 1px solid transparent; }
 .pill.side.home { background: var(--navy); color: #fff; }

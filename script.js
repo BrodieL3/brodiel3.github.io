@@ -37,7 +37,7 @@ const roster = [
   { name: "Gabriel Fenton", year: "Senior", position: "Winger", hometown: "Winter Park, FL / Winter Park High School" },
   { name: "James Foundos", year: "Sophomore", position: "Prop / Backrow", hometown: "San Diego, CA / Francis Parker High School" },
   { name: "Eduard Giurca", year: "Sophomore", position: "Backrow", hometown: "Dublin, Ireland / Clongowes Wood College SJ" },
-  { name: "Vince Gude", year: "Junior", position: "Scrum-half / Wing / Center", hometown: "Vienna, VA / Gonzaga College High School" },
+  { name: "Vince Gude", year: "Junior", position: "Scrum-half / Wing / Center", hometown: "Vienna, VA / Gonzaga College High School", title: "Match Secretary" },
   { name: "Will Hartford", year: "Junior", position: "Winger", hometown: "Milton, MA / Boston College High School" },
   { name: "Walker Humphries", year: "Sophomore", position: "Winger", hometown: "Wellington, UK / Wellington College" },
   { name: "Jay Kapoor", year: "Freshman", position: "Flanker / Prop", hometown: "Bethesda, MD / Landon School" },
@@ -46,8 +46,8 @@ const roster = [
   { name: "Logan Luo", year: "Freshman", position: "Winger", hometown: "Xiamen, China / Westtown School" },
   { name: "Nick Luongo", year: "Sophomore", position: "Lock", hometown: "San Francisco, CA / St. Ignatius College Preparatory School" },
   { name: "Alexander Ma", year: "Sophomore", position: "Lock", hometown: "Toronto, Canada / Rothesay Netherwood School" },
-  { name: "Matthew Mancini", year: "Senior", position: "Fullback", hometown: "Darien, CT / Fairfield College Preparatory School" },
-  { name: "Patrick Mancini", year: "Sophomore", position: "Scrum-half / Winger", hometown: "Darien, CT / Fairfield College Preparatory School" },
+  { name: "Matthew Mancini", year: "Senior", position: "Fullback", hometown: "Darien, CT / Fairfield College Preparatory School", title: "Captain" },
+  { name: "Patrick Mancini", year: "Sophomore", position: "Scrum-half / Winger", hometown: "Darien, CT / Fairfield College Preparatory School", title: "Recruitment Chair" },
   { name: "Levi Merenstein", year: "Junior", position: "Flanker / Lock", hometown: "Bethesda, MD / Walt Whitman High School" },
   { name: "Finlay Mitchell", year: "Junior", position: "Center", hometown: "Charlotte, NC / Marvin Ridge High School" },
   { name: "Ishaan Mittal", year: "Junior", position: "Winger", hometown: "Princeton, NJ / The Peddie School" },
@@ -59,16 +59,16 @@ const roster = [
   { name: "Evan O'Reilly", year: "Freshman", position: "Flanker", hometown: "Dublin, Ireland / Clongowes Wood College SJ" },
   { name: "Ryan Finn O'Sullivan", year: "Freshman", position: "Winger", hometown: "Greenwich, CT / Brunswick School" },
   { name: "Nicholas Plachta", year: "Sophomore", position: "Forward", hometown: "Huntington, NY" },
-  { name: "Will Puzzuoli", year: "Junior", position: "Center / Winger", hometown: "Rye, NY / Rye High School" },
+  { name: "Will Puzzuoli", year: "Junior", position: "Center / Winger", hometown: "Rye, NY / Rye High School", title: "Alumni Chair" },
   { name: "Grady Rannow", year: "Junior", position: "—", hometown: "Minneapolis, MN / The Blake School" },
   { name: "Zach Rozanski", year: "Freshman", position: "Backrow", hometown: "Greenwich, CT / Hotchkiss School" },
-  { name: "Joel Saxon", year: "Senior", position: "Scrum-half", hometown: "Morristown, NJ / Delbarton School" },
+  { name: "Joel Saxon", year: "Senior", position: "Scrum-half", hometown: "Morristown, NJ / Delbarton School", title: "President" },
   { name: "Aidan Schmidt", year: "Sophomore", position: "Winger", hometown: "Rye, NY / Rye High School" },
-  { name: "Ansel Scholl", year: "Senior", position: "Scrum-half", hometown: "New York, NY / UNIS" },
+  { name: "Ansel Scholl", year: "Senior", position: "Scrum-half", hometown: "New York, NY / UNIS", title: "Treasurer" },
   { name: "Robin Sechriest", year: "Freshman", position: "Fullback", hometown: "Washington, DC / Gonzaga College High School" },
   { name: "Pratham Sethia", year: "Junior", position: "Winger", hometown: "Ellicott City, MD / Marriotts Ridge High School" },
-  { name: "Conor Sippel", year: "Senior", position: "Flyhalf", hometown: "Hong Kong / Valley Fort RFC" },
-  { name: "Finn Sippel", year: "Sophomore", position: "Center", hometown: "Hong Kong / German Swiss International School" },
+  { name: "Conor Sippel", year: "Senior", position: "Flyhalf", hometown: "Hong Kong / Valley Fort RFC", title: "Social Chair" },
+  { name: "Finn Sippel", year: "Sophomore", position: "Center", hometown: "Hong Kong / German Swiss International School", title: "Vice President" },
   { name: "Jackson Snyder", year: "Freshman", position: "Lock", hometown: "Washington, DC / Georgetown Prep" },
   { name: "Harry Spence", year: "Sophomore", position: "Lock", hometown: "New York, NY / Groton School" },
   { name: "Salar Syed", year: "Freshman", position: "—", hometown: "Lahore, Pakistan" },
@@ -251,6 +251,7 @@ function renderRoster() {
             <span class="player">
               ${avatarMarkup(player.name, "assets/roster", ROSTER_HEADSHOTS)}
               <span class="player-name">${escapeHtml(player.name)}</span>
+              ${player.title ? `<span class="role-badge">${escapeHtml(player.title)}</span>` : ""}
             </span>
           </td>
           <td data-label="Year">${player.year}</td>

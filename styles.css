@@ -723,8 +723,20 @@ tbody tr:hover { background: var(--surface-2); }
 .avatar-lg { width: 92px; height: 92px; }
 .avatar-lg .avatar-initials { font-size: 1.5rem; letter-spacing: 0.04em; }
 
-.player { display: flex; align-items: center; gap: 12px; }
+.player { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
 .player-name { font-weight: 500; }
+
+.role-badge {
+  padding: 2px 9px;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--navy);
+  background: var(--gold-soft);
+  border-radius: 999px;
+  white-space: nowrap;
+}
 
 /* ---------- coaching staff ---------- */
 
@@ -1058,6 +1070,15 @@ tbody tr:hover { background: var(--surface-2); }
   background: var(--navy);
   color: #fff;
   border-radius: var(--radius-lg);
+}
+
+.spotlight-photo {
+  display: block;
+  width: calc(100% + 60px);
+  margin: -30px -30px 20px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
 }
 
 .spotlight span {

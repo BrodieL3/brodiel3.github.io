@@ -30,7 +30,7 @@ const roster = [
   { name: "Finn Sippel", year: "Sophomore", position: "Center", hometown: "Hong Kong / German Swiss International School", title: "Vice President" },
   { name: "Patrick Mancini", year: "Sophomore", position: "Scrum-half / Winger", hometown: "Darien, CT / Fairfield College Preparatory School", title: "Recruitment Chair" },
   { name: "Elias Abourjaili", year: "Freshman", position: "Center / Fullback", hometown: "Danvers, MA / Malden Catholic High School" },
-  { name: "Dante Agostini", year: "Freshman", position: "Flyhalf", hometown: "Lidingö, SWE" },
+  { name: "Dante Agostini", year: "Freshman", position: "Flyhalf", hometown: "Lidingö, SWE / The Kinkaid School" },
   { name: "Bernardo Amare", year: "Freshman", position: "Winger", hometown: "Houston, TX / Awty International School" },
   { name: "Maximus Anigacz", year: "Junior", position: "Hooker", hometown: "New York, NY / Xavier High School" },
   { name: "Ethan Brady", year: "Junior", position: "Lock", hometown: "Miami, FL / American Heritage High School" },

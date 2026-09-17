@@ -169,12 +169,12 @@ const matchData = {
    --------------------------------------------------------- */
 /* IG:START — rewritten by scripts/refresh-instagram.mjs, do not edit by hand */
 const instagramPosts = [
-  { code: "DdJvTO1oqrB", image: "assets/ig-1.jpg", date: "September 11, 2026", caption: "Alright lads, tonight is the first 15s game of the season against Catholic University." },
-  { code: "DdAOt5kDtFl", image: "assets/ig-2.jpg", date: "September 7, 2026", caption: "With our opening match just four days away, we want to take a moment to recognize one of the most…" },
-  { code: "Dc4Rq6tIpyu", image: "assets/ig-3.jpg", date: "September 4, 2026", caption: "Excited to release the Fall '26 15s schedule!" },
-  { code: "DcbK5-6CBZu", image: "assets/ig-4.jpg", date: "August 24, 2026", caption: "Alright boys, the Fall 2026 15s Season starts next week. Tuesday, September 1st." },
-  { code: "DbTKeU5Dj1P", image: "assets/ig-5.jpg", date: "July 27, 2026", caption: "With the summer coming to an end and the Fall '26 season starting soon, GURFC would like to…" },
-  { code: "DX4yBNFFMPu", image: "assets/ig-6.jpg", date: "May 3, 2026", caption: "The boys came back from Nationals 7s placing 8th in the Nation in Division II." },
+  { code: "DdUrsW6oukk", image: "assets/ig-1.jpg", date: "September 15, 2026", caption: "As we gear up for the next match against Frostburg, we want to take a moment to recognize one of…" },
+  { code: "DdJvTO1oqrB", image: "assets/ig-2.jpg", date: "September 11, 2026", caption: "Alright lads, tonight is the first 15s game of the season against Catholic University." },
+  { code: "DdAOt5kDtFl", image: "assets/ig-3.jpg", date: "September 7, 2026", caption: "With our opening match just four days away, we want to take a moment to recognize one of the most…" },
+  { code: "Dc4Rq6tIpyu", image: "assets/ig-4.jpg", date: "September 4, 2026", caption: "Excited to release the Fall '26 15s schedule!" },
+  { code: "DcbK5-6CBZu", image: "assets/ig-5.jpg", date: "August 24, 2026", caption: "Alright boys, the Fall 2026 15s Season starts next week. Tuesday, September 1st." },
+  { code: "DbTKeU5Dj1P", image: "assets/ig-6.jpg", date: "July 27, 2026", caption: "With the summer coming to an end and the Fall '26 season starting soon, GURFC would like to…" },
 ];
 /* IG:END */
 

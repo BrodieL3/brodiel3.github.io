@@ -133,14 +133,14 @@ const matchData = {
       "A five-match fall slate in Division II National Collegiate Rugby. Home fixtures are played at Cooper Field; away venues and kickoff times are confirmed closer to match day.",
     next: {
       status: "Upcoming",
-      matchup: "GURFC at Frostburg University",
-      detail: "Saturday, September 19, 2026 \u00b7 1:00 PM at FSU Rugby Field",
-      side: "Away",
+      matchup: "GURFC vs UMBC",
+      detail: "Saturday, September 26, 2026 \u00b7 6:30 PM at Cooper Field",
+      side: "Home",
     },
     matches: [
       { date: "Fri, Sep. 11, 2026", opponent: "Catholic University", side: "Away", venue: "Cardinal Stadium, 7:00 PM", result: "Loss" },
-      { date: "Sat, Sep. 19, 2026", opponent: "Frostburg University", side: "Away", venue: "FSU Rugby Field, 1:00 PM" },
-      { date: "Sat, Sep. 26, 2026", opponent: "UMBC", side: "Home", venue: "Cooper Field" },
+      { date: "Sat, Sep. 19, 2026", opponent: "Frostburg University", side: "Away", venue: "FSU Rugby Field, 1:00 PM", result: "Win", score: "55\u20135" },
+      { date: "Sat, Sep. 26, 2026", opponent: "UMBC", side: "Home", venue: "Cooper Field, 6:30 PM" },
       { date: "Fri, Oct. 2, 2026", opponent: "Loyola", side: "Home", venue: "Cooper Field" },
       { date: "Sat, Oct. 17, 2026", opponent: "Towson", side: "Away", venue: "TBD" },
     ],
@@ -366,7 +366,9 @@ function matchMarkup(format) {
                   <td data-label="Venue">${match.venue}</td>
                   <td data-label="Result">${
                     match.result
-                      ? `<span class="pill ${match.result.toLowerCase()}">${match.result}</span>`
+                      ? `<span class="pill ${match.result.toLowerCase()}">${match.result}</span>${
+                          match.score ? ` <span class="match-score">${match.score}</span>` : ""
+                        }`
                       : "\u2014"
                   }</td>
                 </tr>`

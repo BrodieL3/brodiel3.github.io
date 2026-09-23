@@ -916,6 +916,8 @@ tbody tr:hover { background: var(--surface-2); }
 .pill.loss { background: #f7eaea; color: #96323b; }
 .pill.draw { background: #f4f1e8; color: #7a6a2e; }
 
+.match-score { margin-left: 6px; font-size: 0.85em; color: var(--muted); }
+
 .pill.side { border: 1px solid transparent; }
 .pill.side.home { background: var(--navy); color: #fff; }
 .pill.side.away { background: transparent; border-color: var(--line-strong); color: var(--muted); }

@@ -169,12 +169,12 @@ const matchData = {
    --------------------------------------------------------- */
 /* IG:START — rewritten by scripts/refresh-instagram.mjs, do not edit by hand */
 const instagramPosts = [
-  { code: "DdkuEfeuSw8", image: "assets/ig-1.jpg", date: "September 22, 2026", caption: "This week’s spotlight features Patrick Mancini. Patrick went above and beyond in his role as…" },
-  { code: "DdhE23IiOjG", image: "assets/ig-2.jpg", date: "September 20, 2026", caption: "A well-earned win after an incredible effort yesterday. We’ll look to carry that momentum into our…" },
-  { code: "DddP24Gui0W", image: "assets/ig-3.jpg", date: "September 19, 2026", caption: "The lads are back and ready for game two of the season." },
-  { code: "DdUrsW6oukk", image: "assets/ig-4.jpg", date: "September 15, 2026", caption: "As we gear up for the next match against Frostburg, we want to take a moment to recognize one of…" },
-  { code: "DdJvTO1oqrB", image: "assets/ig-5.jpg", date: "September 11, 2026", caption: "Alright lads, tonight is the first 15s game of the season against Catholic University." },
-  { code: "DdAOt5kDtFl", image: "assets/ig-6.jpg", date: "September 7, 2026", caption: "With our opening match just four days away, we want to take a moment to recognize one of the most…" },
+  { code: "DdvXRtVu1TX", image: "assets/ig-1.jpg", date: "September 26, 2026", caption: "First home game of the season, see you there." },
+  { code: "DdkuEfeuSw8", image: "assets/ig-2.jpg", date: "September 22, 2026", caption: "This week’s spotlight features Patrick Mancini. Patrick went above and beyond in his role as…" },
+  { code: "DdhE23IiOjG", image: "assets/ig-3.jpg", date: "September 20, 2026", caption: "A well-earned win after an incredible effort yesterday. We’ll look to carry that momentum into our…" },
+  { code: "DddP24Gui0W", image: "assets/ig-4.jpg", date: "September 19, 2026", caption: "The lads are back and ready for game two of the season." },
+  { code: "DdUrsW6oukk", image: "assets/ig-5.jpg", date: "September 15, 2026", caption: "As we gear up for the next match against Frostburg, we want to take a moment to recognize one of…" },
+  { code: "DdJvTO1oqrB", image: "assets/ig-6.jpg", date: "September 11, 2026", caption: "Alright lads, tonight is the first 15s game of the season against Catholic University." },
 ];
 /* IG:END */
 

@@ -133,14 +133,14 @@ const matchData = {
       "A five-match fall slate in Division II National Collegiate Rugby. Home fixtures are played at Cooper Field; away venues and kickoff times are confirmed closer to match day.",
     next: {
       status: "Upcoming",
-      matchup: "GURFC vs UMBC",
-      detail: "Saturday, September 26, 2026 \u00b7 6:30 PM at Cooper Field",
+      matchup: "GURFC vs Loyola",
+      detail: "Friday, October 2, 2026 at Cooper Field",
       side: "Home",
     },
     matches: [
       { date: "Fri, Sep. 11, 2026", opponent: "Catholic University", side: "Away", venue: "Cardinal Stadium, 7:00 PM", result: "Loss" },
       { date: "Sat, Sep. 19, 2026", opponent: "Frostburg University", side: "Away", venue: "FSU Rugby Field, 1:00 PM", result: "Win", score: "55\u20135" },
-      { date: "Sat, Sep. 26, 2026", opponent: "UMBC", side: "Home", venue: "Cooper Field, 6:30 PM" },
+      { date: "Sat, Sep. 26, 2026", opponent: "UMBC", side: "Home", venue: "Cooper Field, 6:30 PM", result: "Win", score: "33\u20135" },
       { date: "Fri, Oct. 2, 2026", opponent: "Loyola", side: "Home", venue: "Cooper Field" },
       { date: "Sat, Oct. 17, 2026", opponent: "Towson", side: "Away", venue: "TBD" },
     ],

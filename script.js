@@ -169,12 +169,12 @@ const matchData = {
    --------------------------------------------------------- */
 /* IG:START — rewritten by scripts/refresh-instagram.mjs, do not edit by hand */
 const instagramPosts = [
-  { code: "Dd1NyBGxSkg", image: "assets/ig-1.jpg", date: "September 28, 2026", caption: "Highlights from our 33-5 win over UMBC." },
-  { code: "Ddzbr4NIWbI", image: "assets/ig-2.jpg", date: "September 27, 2026", caption: "A strong showing in our first home game of the season in wet conditions under the lights." },
-  { code: "DdvXRtVu1TX", image: "assets/ig-3.jpg", date: "September 26, 2026", caption: "First home game of the season, see you there." },
-  { code: "DdkuEfeuSw8", image: "assets/ig-4.jpg", date: "September 22, 2026", caption: "This week’s spotlight features Patrick Mancini. Patrick went above and beyond in his role as…" },
-  { code: "DdhE23IiOjG", image: "assets/ig-5.jpg", date: "September 20, 2026", caption: "A well-earned win after an incredible effort yesterday. We’ll look to carry that momentum into our…" },
-  { code: "DddP24Gui0W", image: "assets/ig-6.jpg", date: "September 19, 2026", caption: "The lads are back and ready for game two of the season." },
+  { code: "DeANILJCtiv", image: "assets/ig-1.jpg", date: "October 2, 2026", caption: "Our homecoming matchup is here." },
+  { code: "Dd1NyBGxSkg", image: "assets/ig-2.jpg", date: "September 28, 2026", caption: "Highlights from our 33-5 win over UMBC." },
+  { code: "Ddzbr4NIWbI", image: "assets/ig-3.jpg", date: "September 27, 2026", caption: "A strong showing in our first home game of the season in wet conditions under the lights." },
+  { code: "DdvXRtVu1TX", image: "assets/ig-4.jpg", date: "September 26, 2026", caption: "First home game of the season, see you there." },
+  { code: "DdkuEfeuSw8", image: "assets/ig-5.jpg", date: "September 22, 2026", caption: "This week’s spotlight features Patrick Mancini. Patrick went above and beyond in his role as…" },
+  { code: "DdhE23IiOjG", image: "assets/ig-6.jpg", date: "September 20, 2026", caption: "A well-earned win after an incredible effort yesterday. We’ll look to carry that momentum into our…" },
 ];
 /* IG:END */
 

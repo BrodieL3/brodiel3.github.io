@@ -169,12 +169,12 @@ const matchData = {
    --------------------------------------------------------- */
 /* IG:START — rewritten by scripts/refresh-instagram.mjs, do not edit by hand */
 const instagramPosts = [
-  { code: "DeaRh2uEbEB", image: "assets/ig-1.jpg", date: "October 12, 2026", caption: "Coming off our bye week, we want to recognize two of our own who have continued putting in the…" },
-  { code: "DeF0TDNjuYX", image: "assets/ig-2.jpg", date: "October 4, 2026", caption: "Final from Cooper." },
-  { code: "DeANILJCtiv", image: "assets/ig-3.jpg", date: "October 2, 2026", caption: "Our homecoming matchup is here." },
-  { code: "Dd1NyBGxSkg", image: "assets/ig-4.jpg", date: "September 28, 2026", caption: "Highlights from our 33-5 win over UMBC." },
-  { code: "Ddzbr4NIWbI", image: "assets/ig-5.jpg", date: "September 27, 2026", caption: "A strong showing in our first home game of the season in wet conditions under the lights." },
-  { code: "DdvXRtVu1TX", image: "assets/ig-6.jpg", date: "September 26, 2026", caption: "First home game of the season, see you there." },
+  { code: "DemJgGZxHl4", image: "assets/ig-1.jpg", date: "October 17, 2026", caption: "Our final regular season match is here." },
+  { code: "DeaRh2uEbEB", image: "assets/ig-2.jpg", date: "October 12, 2026", caption: "Coming off our bye week, we want to recognize two of our own who have continued putting in the…" },
+  { code: "DeF0TDNjuYX", image: "assets/ig-3.jpg", date: "October 4, 2026", caption: "Final from Cooper." },
+  { code: "DeANILJCtiv", image: "assets/ig-4.jpg", date: "October 2, 2026", caption: "Our homecoming matchup is here." },
+  { code: "Dd1NyBGxSkg", image: "assets/ig-5.jpg", date: "September 28, 2026", caption: "Highlights from our 33-5 win over UMBC." },
+  { code: "Ddzbr4NIWbI", image: "assets/ig-6.jpg", date: "September 27, 2026", caption: "A strong showing in our first home game of the season in wet conditions under the lights." },
 ];
 /* IG:END */
 

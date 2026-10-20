@@ -169,12 +169,12 @@ const matchData = {
    --------------------------------------------------------- */
 /* IG:START — rewritten by scripts/refresh-instagram.mjs, do not edit by hand */
 const instagramPosts = [
-  { code: "DenMp39CGYL", image: "assets/ig-1.jpg", date: "October 17, 2026", caption: "What a finish in today’s win over Towson" },
-  { code: "DenLSo4GEjK", image: "assets/ig-2.jpg", date: "October 17, 2026", caption: "A great day for Georgetown Rugby, with both A and B sides picking up wins to close out the regular…" },
-  { code: "DemJgGZxHl4", image: "assets/ig-3.jpg", date: "October 17, 2026", caption: "Our final regular season match is here." },
-  { code: "DeaRh2uEbEB", image: "assets/ig-4.jpg", date: "October 12, 2026", caption: "Coming off our bye week, we want to recognize two of our own who have continued putting in the…" },
-  { code: "DeF0TDNjuYX", image: "assets/ig-5.jpg", date: "October 4, 2026", caption: "Final from Cooper." },
-  { code: "DeANILJCtiv", image: "assets/ig-6.jpg", date: "October 2, 2026", caption: "Our homecoming matchup is here." },
+  { code: "DesMvA1GLIM", image: "assets/ig-1.jpg", date: "October 19, 2026", caption: "Now in his second year with GURFC, Finlay Mitchell has established himself as an essential part of…" },
+  { code: "DenMp39CGYL", image: "assets/ig-2.jpg", date: "October 17, 2026", caption: "What a finish in today’s win over Towson" },
+  { code: "DenLSo4GEjK", image: "assets/ig-3.jpg", date: "October 17, 2026", caption: "A great day for Georgetown Rugby, with both A and B sides picking up wins to close out the regular…" },
+  { code: "DemJgGZxHl4", image: "assets/ig-4.jpg", date: "October 17, 2026", caption: "Our final regular season match is here." },
+  { code: "DeaRh2uEbEB", image: "assets/ig-5.jpg", date: "October 12, 2026", caption: "Coming off our bye week, we want to recognize two of our own who have continued putting in the…" },
+  { code: "DeF0TDNjuYX", image: "assets/ig-6.jpg", date: "October 4, 2026", caption: "Final from Cooper." },
 ];
 /* IG:END */
 

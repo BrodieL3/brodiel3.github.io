@@ -130,19 +130,21 @@ const matchData = {
     season: "Fall 2026",
     title: "15s fixtures",
     summary:
-      "A five-match fall slate in Division II National Collegiate Rugby. Home fixtures are played at Cooper Field; away venues and kickoff times are confirmed closer to match day.",
+      "A five-match fall slate in Division II National Collegiate Rugby, followed by the MARC playoffs. Home fixtures are played at Cooper Field; away venues and kickoff times are confirmed closer to match day.",
     next: {
       status: "Upcoming",
-      matchup: "GURFC at Towson",
-      detail: "Saturday, October 17, 2026 \u00b7 Venue and kickoff TBD",
-      side: "Away",
+      matchup: "MARC Semifinal: GURFC vs Villanova",
+      detail: "Saturday, October 31, 2026 \u00b7 Dundalk, MD \u00b7 12:30 PM",
+      side: "Neutral",
     },
     matches: [
       { date: "Fri, Sep. 11, 2026", opponent: "Catholic University", side: "Away", venue: "Cardinal Stadium, 7:00 PM", result: "Loss" },
       { date: "Sat, Sep. 19, 2026", opponent: "Frostburg University", side: "Away", venue: "FSU Rugby Field, 1:00 PM", result: "Win", score: "55\u20135" },
       { date: "Sat, Sep. 26, 2026", opponent: "UMBC", side: "Home", venue: "Cooper Field, 6:30 PM", result: "Win", score: "33\u20135" },
       { date: "Fri, Oct. 2, 2026", opponent: "Loyola", side: "Home", venue: "Cooper Field, 7:00 PM", result: "Loss" },
-      { date: "Sat, Oct. 17, 2026", opponent: "Towson", side: "Away", venue: "TBD" },
+      { date: "Sat, Oct. 17, 2026", opponent: "Towson", side: "Away", venue: "TBD", result: "Win" },
+      { date: "Sat, Oct. 24, 2026", opponent: "Bucknell (MARC Quarterfinal)", side: "Away", venue: "Bucknell Rugby Field, 3:30 PM", result: "Win" },
+      { date: "Sat, Oct. 31, 2026", opponent: "Villanova (MARC Semifinal)", side: "Neutral", venue: "Dundalk, MD, 12:30 PM" },
     ],
   },
   sevens: {

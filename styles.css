@@ -921,6 +921,7 @@ tbody tr:hover { background: var(--surface-2); }
 .pill.side { border: 1px solid transparent; }
 .pill.side.home { background: var(--navy); color: #fff; }
 .pill.side.away { background: transparent; border-color: var(--line-strong); color: var(--muted); }
+.pill.side.neutral { background: transparent; border-color: var(--line-strong); border-style: dashed; color: var(--muted); }
 
 .next-match .pill.side { justify-self: end; }
 

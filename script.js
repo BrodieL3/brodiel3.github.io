@@ -142,7 +142,7 @@ const matchData = {
       { date: "Sat, Sep. 19, 2026", opponent: "Frostburg University", side: "Away", venue: "FSU Rugby Field", kickoff: "1:00 PM", result: "Win", score: "55\u20135" },
       { date: "Sat, Sep. 26, 2026", opponent: "UMBC", side: "Home", venue: "Cooper Field", kickoff: "6:30 PM", result: "Win", score: "33\u20135" },
       { date: "Fri, Oct. 2, 2026", opponent: "Loyola", side: "Home", venue: "Cooper Field", kickoff: "7:00 PM", result: "Loss", score: "15\u201317" },
-      { date: "Sat, Oct. 17, 2026", opponent: "Towson", side: "Away", venue: "Mount Saint Joseph HS", kickoff: "TBD", result: "Win", score: "38\u201317" },
+      { date: "Sat, Oct. 17, 2026", opponent: "Towson", side: "Away", venue: "Mount Saint Joseph HS", kickoff: "11:00 AM", result: "Win", score: "38\u201317" },
       { date: "Sat, Oct. 24, 2026", opponent: "Bucknell (MARC Quarterfinal)", side: "Away", venue: "Bucknell Rugby Field", kickoff: "3:30 PM", result: "Win", score: "34\u201326" },
       { date: "Sat, Oct. 31, 2026", opponent: "Villanova (MARC Semifinal)", side: "Neutral", venue: "Dundalk, MD", kickoff: "12:30 PM" },
     ],
@@ -365,7 +365,7 @@ function matchMarkup(format) {
             <th>Home / Away</th>
             <th>Venue</th>
             <th>Kickoff</th>
-            <th>Result <span class="th-note">(GU first)</span></th>
+            <th>Result</th>
           </tr>
         </thead>
         <tbody>

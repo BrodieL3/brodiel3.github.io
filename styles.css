@@ -916,8 +916,6 @@ tbody tr:hover { background: var(--surface-2); }
 .pill.loss { background: #f7eaea; color: #96323b; }
 .pill.draw { background: #f4f1e8; color: #7a6a2e; }
 
-.th-note { font-weight: 400; letter-spacing: 0.04em; text-transform: none; opacity: 0.7; }
-
 .result { display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; }
 .result-badge {
   display: inline-grid;

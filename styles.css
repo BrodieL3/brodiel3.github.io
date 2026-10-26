@@ -916,7 +916,32 @@ tbody tr:hover { background: var(--surface-2); }
 .pill.loss { background: #f7eaea; color: #96323b; }
 .pill.draw { background: #f4f1e8; color: #7a6a2e; }
 
-.match-score { margin-left: 6px; font-size: 0.85em; color: var(--muted); }
+.th-note { font-weight: 400; letter-spacing: 0.04em; text-transform: none; opacity: 0.7; }
+
+.result { display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; }
+.result-badge {
+  display: inline-grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  font-family: "Oswald", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.result-score {
+  font-family: "Oswald", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--navy);
+  font-variant-numeric: tabular-nums;
+  min-width: 4.2ch;
+}
+.result-win .result-badge { background: #eaf3ec; color: #1f6b39; }
+.result-loss .result-badge { background: #f7eaea; color: #96323b; }
+.result-draw .result-badge { background: #f4f1e8; color: #7a6a2e; }
+.result-loss .result-score { color: var(--muted); }
+.result-pending { color: var(--muted); }
 
 .pill.side { border: 1px solid transparent; }
 .pill.side.home { background: var(--navy); color: #fff; }

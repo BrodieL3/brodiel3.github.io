@@ -171,12 +171,12 @@ const matchData = {
    --------------------------------------------------------- */
 /* IG:START — rewritten by scripts/refresh-instagram.mjs, do not edit by hand */
 const instagramPosts = [
-  { code: "DfFHpgSz3Ge", image: "assets/ig-1.jpg", date: "October 29, 2026", caption: "One step closer to the finals." },
-  { code: "De-XH_1iBYz", image: "assets/ig-2.jpg", date: "October 26, 2026", caption: "This week’s player spotlight features freshman Jackson Snyder, who has already made a big impact…" },
-  { code: "De5VdyUkTYu", image: "assets/ig-3.jpg", date: "October 24, 2026", caption: "We get it done on the road against Bucknell and advance to the semifinals!" },
-  { code: "De4bl9tCVq0", image: "assets/ig-4.jpg", date: "October 24, 2026", caption: "Playoffs have arrived." },
-  { code: "DevZ636CTX_", image: "assets/ig-5.jpg", date: "October 21, 2026", caption: "A look back at our win against Towson" },
-  { code: "DesMvA1GLIM", image: "assets/ig-6.jpg", date: "October 19, 2026", caption: "Now in his second year with GURFC, Finlay Mitchell has established himself as an essential part of…" },
+  { code: "DfKTcYuxUB3", image: "assets/ig-1.jpg", date: "October 31, 2026", caption: "Semifinal vs Villanova at 12:30 p.m." },
+  { code: "DfFHpgSz3Ge", image: "assets/ig-2.jpg", date: "October 29, 2026", caption: "One step closer to the finals." },
+  { code: "De-XH_1iBYz", image: "assets/ig-3.jpg", date: "October 26, 2026", caption: "This week’s player spotlight features freshman Jackson Snyder, who has already made a big impact…" },
+  { code: "De5VdyUkTYu", image: "assets/ig-4.jpg", date: "October 24, 2026", caption: "We get it done on the road against Bucknell and advance to the semifinals!" },
+  { code: "De4bl9tCVq0", image: "assets/ig-5.jpg", date: "October 24, 2026", caption: "Playoffs have arrived." },
+  { code: "DevZ636CTX_", image: "assets/ig-6.jpg", date: "October 21, 2026", caption: "A look back at our win against Towson" },
 ];
 /* IG:END */
 

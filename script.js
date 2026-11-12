@@ -160,6 +160,28 @@ const matchData = {
    `caption` is a short excerpt that may be empty (plenty of posts have
    no caption). The card falls back to just the date when it is.
    --------------------------------------------------------- */
+/* ---------------------------------------------------------
+   SHOP — products are pulled live from the club's World Rugby Shop
+   collection on every page load. The store itself can't be embedded
+   (it blocks framing), so each card links out to the product page.
+   SHOP_FEATURED: product handles to show first, in order (the part of
+   the product URL after /products/). If any sell out or disappear, the
+   grid tops up with other in-stock products up to SHOP_MAX_ITEMS.
+   --------------------------------------------------------- */
+const SHOP_STORE = "https://www.worldrugbyshop.com";
+const SHOP_COLLECTION = "georgetown-university-rugby-football-club";
+const SHOP_MAX_ITEMS = 8;
+const SHOP_FEATURED = [
+  "georgetown-university-rfc-adult-low-profile-cotton-twill-dad-cap",
+  "georgetown-university-rfc-advantage-rugby-shorts-by-canterbury",
+  "georgetown-university-rfc-club-1-4-zip-mid-layer-training-top-by-canterbury",
+  "georgetown-university-rfc-club-crew-sweatshirt-by-canterbury",
+  "georgetown-university-rfc-club-dry-polo-by-canterbury",
+  "georgetown-university-rfc-club-dry-tee-by-canterbury",
+  "georgetown-university-rfc-club-hoodie-by-canterbury",
+  "georgetown-university-rfc-club-lightweight-hoodie-by-canterbury",
+];
+
 /* IG:START — rewritten by scripts/refresh-instagram.mjs, do not edit by hand */
 const instagramPosts = [
   { code: "DfQZN4JCU0E", image: "assets/ig-1.jpg", date: "November 2, 2026", caption: "MO MO MO! That time of the year again… GURFC is proud to participate in this year’s addition of…" },
@@ -408,6 +430,68 @@ formatTabs.forEach((tab) => {
 });
 
 renderMatchFormat("fifteens");
+
+/* =========================================================
+   Shop — live product strip. If the request fails for any reason the
+   section stays as the plain banner (the strip is hidden by default).
+   ========================================================= */
+
+const shopWrap = document.querySelector("[data-shop]");
+const shopGrid = document.querySelector("[data-shop-grid]");
+
+const shopTitle = (title) =>
+  title
+    .replace(/^Georgetown University (RFC|Rugby Football Club)\s*/i, "")
+    .replace(/\s+by Canterbury$/i, "")
+    .trim();
+
+const shopPrice = (product) => {
+  const prices = product.variants.map((v) => parseFloat(v.price)).filter((n) => !isNaN(n));
+  if (!prices.length) return "";
+  const min = Math.min(...prices);
+  const max = Math.max(...prices);
+  return `${min === max ? "" : "From "}$${min.toFixed(2)}`;
+};
+
+const shopImage = (product) => {
+  const src = product.images && product.images[0] && product.images[0].src;
+  if (!src) return "";
+  return src + (src.includes("?") ? "&" : "?") + "width=600";
+};
+
+async function renderShop() {
+  if (!shopWrap || !shopGrid) return;
+  try {
+    const res = await fetch(`${SHOP_STORE}/collections/${SHOP_COLLECTION}/products.json?limit=250`);
+    if (!res.ok) return;
+    const { products } = await res.json();
+    let items = (products || []).filter((p) => p.variants.some((v) => v.available) && shopImage(p));
+    const featured = SHOP_FEATURED.map((h) => items.find((p) => p.handle === h)).filter(Boolean);
+    items = [...featured, ...items.filter((p) => !featured.includes(p))];
+    items = items.slice(0, SHOP_MAX_ITEMS);
+    if (!items.length) return;
+
+    shopGrid.innerHTML = items
+      .map(
+        (p) => `
+        <a class="shop-card" href="${SHOP_STORE}/products/${encodeURIComponent(p.handle)}" target="_blank" rel="noopener">
+          <span class="shop-media">
+            <img src="${escapeHtml(shopImage(p))}" alt="${escapeHtml(shopTitle(p.title))}" loading="lazy" decoding="async" />
+          </span>
+          <span class="shop-meta">
+            <span class="shop-name">${escapeHtml(shopTitle(p.title))}</span>
+            <span class="shop-price">${shopPrice(p)}</span>
+          </span>
+        </a>`
+      )
+      .join("");
+    shopWrap.hidden = false;
+  } catch (err) {
+    /* store unreachable — leave the banner on its own */
+  }
+}
+
+renderShop();
 
 /* =========================================================
    Instagram

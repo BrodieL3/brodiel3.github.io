@@ -116,38 +116,59 @@ const coaches = [
    coloured pill picks the right style.
    --------------------------------------------------------- */
 const matchData = {
+  /* Each format holds a list of seasons, newest first. The first season
+     opens by default; older ones appear in the "Season" dropdown. */
   fifteens: {
     label: "15s",
-    season: "Fall 2026",
-    title: "15s fixtures",
-    summary:
-      "A five-match fall slate in Division II National Collegiate Rugby, followed by the MARC playoffs. Home fixtures are played at Cooper Field; away venues and kickoff times are confirmed closer to match day.",
-    next: {
-      status: "Upcoming",
-      matchup: "MARC Semifinal: GURFC vs Villanova University",
-      detail: "Saturday, October 31, 2026 \u00b7 Dundalk, MD \u00b7 12:30 PM",
-      side: "Neutral",
-    },
-    matches: [
-      { date: "Fri, Sep. 11, 2026", opponent: "Catholic University", side: "Away", venue: "Cardinal Stadium", kickoff: "7:00 PM", result: "Loss", score: "7\u201349" },
-      { date: "Sat, Sep. 19, 2026", opponent: "Frostburg University", side: "Away", venue: "FSU Rugby Field", kickoff: "1:00 PM", result: "Win", score: "55\u20135" },
-      { date: "Sat, Sep. 26, 2026", opponent: "University of Maryland, Baltimore County", side: "Home", venue: "Cooper Field", kickoff: "6:30 PM", result: "Win", score: "33\u20135" },
-      { date: "Fri, Oct. 2, 2026", opponent: "Loyola University Maryland", side: "Home", venue: "Cooper Field", kickoff: "7:00 PM", result: "Loss", score: "15\u201317" },
-      { date: "Sat, Oct. 17, 2026", opponent: "Towson University", side: "Away", venue: "Mount Saint Joseph HS", kickoff: "11:00 AM", result: "Win", score: "38\u201317" },
-      { date: "Sat, Oct. 24, 2026", opponent: "Bucknell University (MARC Quarterfinal)", side: "Away", venue: "Bucknell Rugby Field", kickoff: "3:30 PM", result: "Win", score: "34\u201326" },
-      { date: "Sat, Oct. 31, 2026", opponent: "Villanova University (MARC Semifinal)", side: "Neutral", venue: "Dundalk, MD", kickoff: "12:30 PM" },
+    seasons: [
+      {
+        season: "Fall 2027",
+        title: "15s fixtures",
+        summary:
+          "Fifteen-a-side rugby returns in the fall, in Division II National Collegiate Rugby and the Mid-Atlantic Rugby Conference.",
+        next: null,
+        matches: [],
+        emptyMessage:
+          "The fall 15s schedule has not been released yet. Follow @gurfc for the announcement.",
+      },
+      {
+        season: "Fall 2026",
+        title: "15s fixtures",
+        summary:
+          "Season complete. A five-match fall slate in Division II National Collegiate Rugby and a run to the MARC semifinals, finishing 4–3.",
+        next: null,
+        matches: [
+          { date: "Fri, Sep. 11, 2026", opponent: "Catholic University", side: "Away", venue: "Cardinal Stadium", kickoff: "7:00 PM", result: "Loss", score: "7–49" },
+          { date: "Sat, Sep. 19, 2026", opponent: "Frostburg University", side: "Away", venue: "FSU Rugby Field", kickoff: "1:00 PM", result: "Win", score: "55–5" },
+          { date: "Sat, Sep. 26, 2026", opponent: "University of Maryland, Baltimore County", side: "Home", venue: "Cooper Field", kickoff: "6:30 PM", result: "Win", score: "33–5" },
+          { date: "Fri, Oct. 2, 2026", opponent: "Loyola University Maryland", side: "Home", venue: "Cooper Field", kickoff: "7:00 PM", result: "Loss", score: "15–17" },
+          { date: "Sat, Oct. 17, 2026", opponent: "Towson University", side: "Away", venue: "Mount Saint Joseph HS", kickoff: "11:00 AM", result: "Win", score: "38–17" },
+          { date: "Sat, Oct. 24, 2026", opponent: "Bucknell University (MARC Quarterfinal)", side: "Away", venue: "Bucknell Rugby Field", kickoff: "3:30 PM", result: "Win", score: "34–26" },
+          { date: "Sat, Oct. 31, 2026", opponent: "Villanova University (MARC Semifinal)", side: "Neutral", venue: "Dundalk, MD", kickoff: "12:30 PM", result: "Loss", score: "15–60" },
+        ],
+      },
     ],
   },
+
+  /* 7s seasons list tournaments instead of matches. Each tournament is
+     its own box; add games to `games` once the draw is out:
+       { stage: "Group stage", opponent: "...", kickoff: "9:20 AM", pitch: "Pitch 2", result: "Win", score: "24–5" }
+     Set `finish` (e.g. "Round of 16") once the tournament is over. */
   sevens: {
     label: "7s",
-    season: "Spring 2027",
-    title: "7s tournaments",
-    summary:
-      "The spring season shifts into seven-a-side rugby, with tournament days, faster rotations, and open competition for roster spots.",
-    next: null,
-    matches: [],
-    emptyMessage:
-      "The spring 7s schedule has not been released yet. Follow @gurfc for the announcement.",
+    seasons: [
+      {
+        season: "2026–27 Season",
+        title: "7s tournaments",
+        summary:
+          "Seven-a-side tournament season. More tournaments will be added as they are confirmed.",
+        tournaments: [
+          { name: "Christmas 7s", date: "Sat, Dec. 5, 2026", location: "Richmond, VA", venue: "", finish: "", games: [] },
+        ],
+        emptyMessage:
+          "The 7s schedule has not been released yet. Follow @gurfc for the announcement.",
+      },
+    ],
   },
 };
 
@@ -326,7 +347,7 @@ const formatPanel = document.querySelector("#match-format-panel");
 const formatTabs = document.querySelectorAll(".format-tab");
 
 function resultMarkup(match) {
-  if (!match.result) return `<span class="result result-pending">\u2014</span>`;
+  if (!match.result) return `<span class="result result-pending">—</span>`;
   const key = match.result.toLowerCase();
   const letter = { win: "W", loss: "L", draw: "D" }[key] || match.result;
   return `<span class="result result-${key}" title="${match.result}">
@@ -335,34 +356,109 @@ function resultMarkup(match) {
     }</span>`;
 }
 
-function matchMarkup(format) {
+/* Selected season per format (index into `seasons`, 0 = current). */
+const seasonState = { fifteens: 0, sevens: 0 };
+
+function seasonPicker(key) {
+  const seasons = matchData[key].seasons;
+  if (seasons.length < 2) return "";
+  const options = seasons
+    .map(
+      (s, i) =>
+        `<option value="${i}"${i === seasonState[key] ? " selected" : ""}>${s.season}${i === 0 ? " (current)" : ""}</option>`
+    )
+    .join("");
+  return `
+    <label class="season-picker">
+      <span>Season</span>
+      <select data-season-select="${key}" aria-label="Choose ${matchData[key].label} season">${options}</select>
+    </label>`;
+}
+
+function emptyMarkup(season) {
+  return `
+    <div class="schedule-empty">
+      <span class="pill upcoming">To Be Announced</span>
+      <p>${season.emptyMessage}</p>
+    </div>`;
+}
+
+function tournamentMarkup(t) {
+  const games = t.games || [];
+  const status = t.finish
+    ? `<span class="pill final">${t.finish}</span>`
+    : games.some((g) => g.result)
+    ? `<span class="pill upcoming">In Progress</span>`
+    : `<span class="pill upcoming">Upcoming</span>`;
+  const where = [t.venue, t.location].filter(Boolean).join(" · ");
+
+  const body = games.length
+    ? `
+      <table>
+        <thead>
+          <tr><th>Stage</th><th>Opponent</th><th>Kickoff</th><th>Pitch</th><th>Result</th></tr>
+        </thead>
+        <tbody>
+          ${games
+            .map(
+              (g) => `
+            <tr>
+              <td data-label="Stage"><span class="stage">${g.stage}</span></td>
+              <td data-label="Opponent">${g.opponent || "TBD"}</td>
+              <td data-label="Kickoff">${g.kickoff || "TBD"}</td>
+              <td data-label="Pitch">${g.pitch || "—"}</td>
+              <td data-label="Result">${resultMarkup(g)}</td>
+            </tr>`
+            )
+            .join("")}
+        </tbody>
+      </table>`
+    : `<p class="tourney-tba">Draw and kickoff times TBA.</p>`;
+
+  return `
+    <article class="tourney">
+      <header class="tourney-head">
+        <div>
+          <span class="label">${t.date}</span>
+          <h3>${t.name}</h3>
+          ${where ? `<p>${where}</p>` : ""}
+        </div>
+        <div class="tourney-status">
+          ${status}
+        </div>
+      </header>
+      ${body}
+    </article>`;
+}
+
+function matchMarkup(key) {
+  const season = matchData[key].seasons[seasonState[key]];
   const summary = `
     <div class="format-summary">
       <div>
-        <span class="label">${format.season}</span>
-        <h3>${format.title}</h3>
-        <p>${format.summary}</p>
+        <span class="label">${season.season}</span>
+        <h3>${season.title}</h3>
+        <p>${season.summary}</p>
       </div>
+      ${seasonPicker(key)}
     </div>`;
 
-  if (!format.matches.length) {
-    return `
-      ${summary}
-      <div class="schedule-empty">
-        <span class="pill upcoming">To Be Announced</span>
-        <p>${format.emptyMessage}</p>
-      </div>`;
+  if (season.tournaments) {
+    if (!season.tournaments.length) return summary + emptyMarkup(season);
+    return `${summary}<div class="tourney-list">${season.tournaments.map(tournamentMarkup).join("")}</div>`;
   }
 
-  const next = format.next
+  if (!season.matches.length) return summary + emptyMarkup(season);
+
+  const next = season.next
     ? `
       <div class="next-match">
         <div>
-          <span class="pill upcoming">${format.next.status}</span>
-          <h3>${format.next.matchup}</h3>
-          <p>${format.next.detail}</p>
+          <span class="pill upcoming">${season.next.status}</span>
+          <h3>${season.next.matchup}</h3>
+          <p>${season.next.detail}</p>
         </div>
-        <span class="pill side ${format.next.side.toLowerCase()}">${format.next.side}</span>
+        <span class="pill side ${season.next.side.toLowerCase()}">${season.next.side}</span>
       </div>`
     : "";
 
@@ -382,7 +478,7 @@ function matchMarkup(format) {
           </tr>
         </thead>
         <tbody>
-          ${format.matches
+          ${season.matches
             .map(
               (match) => `
                 <tr>
@@ -400,12 +496,14 @@ function matchMarkup(format) {
     </div>`;
 }
 
+let activeFormat = "sevens";
+
 function renderMatchFormat(key, animate = false) {
-  const format = matchData[key];
+  activeFormat = key;
   formatPanel.setAttribute("aria-labelledby", key === "fifteens" ? "tab-15s" : "tab-7s");
 
   const paint = () => {
-    formatPanel.innerHTML = matchMarkup(format);
+    formatPanel.innerHTML = matchMarkup(key);
     formatPanel.classList.remove("is-swapping");
   };
 
@@ -429,7 +527,14 @@ formatTabs.forEach((tab) => {
   });
 });
 
-renderMatchFormat("fifteens");
+formatPanel.addEventListener("change", (event) => {
+  const select = event.target.closest("[data-season-select]");
+  if (!select) return;
+  seasonState[select.dataset.seasonSelect] = Number(select.value);
+  renderMatchFormat(select.dataset.seasonSelect, true);
+});
+
+renderMatchFormat("sevens");
 
 /* =========================================================
    Shop — live product strip. If the request fails for any reason the

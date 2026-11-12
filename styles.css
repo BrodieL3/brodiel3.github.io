@@ -930,6 +930,93 @@ tbody tr:hover { background: var(--surface-2); }
 
 .schedule-empty p { color: var(--muted); max-width: 52ch; }
 
+.season-picker { display: flex; flex-direction: column; gap: 6px; min-width: 190px; }
+
+.season-picker span {
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.tourney-list { display: grid; gap: 16px; }
+
+.tourney {
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--gold);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.tourney-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px 24px;
+  padding: 22px 26px;
+}
+
+.tourney-head .label {
+  display: block;
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.tourney-head h3 { margin: 6px 0 4px; color: var(--navy); }
+.tourney-head p { color: var(--muted); font-size: 0.9rem; }
+
+.tourney-status { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+
+.tourney table { border-top: 1px solid var(--line); }
+
+.stage {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.tourney-tba {
+  margin: 0;
+  padding: 16px 26px 20px;
+  border-top: 1px dashed var(--line-strong);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 760px) {
+  .tourney-status { align-items: flex-start; }
+  .season-picker { min-width: 0; }
+
+  /* 7s games: compact two-line rows instead of stacked label/value cards */
+  .tourney tr {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas:
+      "stage stage result"
+      "opp   opp   result"
+      "kick  pitch pitch";
+    gap: 3px 6px;
+    align-items: center;
+    padding: 14px 18px;
+  }
+  .tourney td { display: block; width: auto; padding: 0; border: 0; }
+  .tourney td::before { content: none; }
+  .tourney td:nth-child(1) { grid-area: stage; }
+  .tourney td:nth-child(2) { grid-area: opp; font-weight: 600; color: var(--navy); }
+  .tourney td:nth-child(3) { grid-area: kick; font-size: 0.82rem; color: var(--muted); }
+  .tourney td:nth-child(4) { grid-area: pitch; font-size: 0.82rem; color: var(--muted); }
+  .tourney td:nth-child(4)::before { content: "\00b7  "; }
+  .tourney td:nth-child(5) { grid-area: result; justify-self: end; }
+}
+
 /* ---------- gallery ---------- */
 
 .gallery {

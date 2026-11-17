@@ -205,12 +205,12 @@ const SHOP_FEATURED = [
 
 /* IG:START — rewritten by scripts/refresh-instagram.mjs, do not edit by hand */
 const instagramPosts = [
-  { code: "DfQZN4JCU0E", image: "assets/ig-1.jpg", date: "November 2, 2026", caption: "MO MO MO! That time of the year again… GURFC is proud to participate in this year’s addition of…" },
-  { code: "DfKTcYuxUB3", image: "assets/ig-2.jpg", date: "October 31, 2026", caption: "Semifinal vs Villanova at 12:30 p.m." },
-  { code: "DfFHpgSz3Ge", image: "assets/ig-3.jpg", date: "October 29, 2026", caption: "One step closer to the finals." },
-  { code: "De-XH_1iBYz", image: "assets/ig-4.jpg", date: "October 26, 2026", caption: "This week’s player spotlight features freshman Jackson Snyder, who has already made a big impact…" },
-  { code: "De5VdyUkTYu", image: "assets/ig-5.jpg", date: "October 24, 2026", caption: "We get it done on the road against Bucknell and advance to the semifinals!" },
-  { code: "De4bl9tCVq0", image: "assets/ig-6.jpg", date: "October 24, 2026", caption: "Playoffs have arrived." },
+  { code: "DfycZ54iajS", image: "assets/ig-1.jpg", date: "November 16, 2026", caption: "We’re halfway through Movember!" },
+  { code: "DfQZN4JCU0E", image: "assets/ig-2.jpg", date: "November 2, 2026", caption: "MO MO MO! That time of the year again… GURFC is proud to participate in this year’s addition of…" },
+  { code: "DfKTcYuxUB3", image: "assets/ig-3.jpg", date: "October 31, 2026", caption: "Semifinal vs Villanova at 12:30 p.m." },
+  { code: "DfFHpgSz3Ge", image: "assets/ig-4.jpg", date: "October 29, 2026", caption: "One step closer to the finals." },
+  { code: "De-XH_1iBYz", image: "assets/ig-5.jpg", date: "October 26, 2026", caption: "This week’s player spotlight features freshman Jackson Snyder, who has already made a big impact…" },
+  { code: "De5VdyUkTYu", image: "assets/ig-6.jpg", date: "October 24, 2026", caption: "We get it done on the road against Bucknell and advance to the semifinals!" },
 ];
 /* IG:END */
 
